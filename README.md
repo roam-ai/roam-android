@@ -1,11 +1,12 @@
 <p align="center">
   <a href="https://roam.ai" target="_blank" align="left">
-    <img src="https://github.com/geosparks/roam-android/blob/master/logo.png?raw=true" width="180">
+    <img src="https://github.com/geosparks/roam-flutter/blob/master/logo.png?raw=true" width="180">
   </a>
   <br />
 </p>
-# Official Roam Android SDK
-This is the official [Roam](https://roam.ai) iOS SDK developed and maintained by Roam B.V
+
+# Official Roam iOS SDK
+This is the official [Roam](https://roam.ai) Android SDK developed and maintained by Roam B.V
 
 Note: Before you get started [signup to our dashboard](https://roam.ai) to get your API Keys.
 ## Quickstart
@@ -270,13 +271,13 @@ Roam.stopPublishing()
 
 Now that you have enabled the location listener, use the below method to subscribe to your own or other user's location updates and events.
 
-#### ***\*Subscribe\****
+#### Subscribe
 
 ```
 Roam.subscribe(TYPE, "USER-ID")
 ```
 
-#### ***\*UnSubscribe\****
+#### UnSubscribe
 
 ```
 Roam.unSubscribe(TYPE, "USER-ID")
