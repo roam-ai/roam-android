@@ -5,7 +5,7 @@
   <br />
 </p>
 
-# Official Roam iOS SDK
+# Official Roam Android SDK
 This is the official [Roam](https://roam.ai) Android SDK developed and maintained by Roam B.V
 
 Note: Before you get started [signup to our dashboard](https://roam.ai) to get your API Keys.
