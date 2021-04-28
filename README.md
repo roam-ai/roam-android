@@ -120,7 +120,7 @@ Roam.setDescription("SET USER DESCRIPTION HERE")
 If you already have a Roam userID which you would like to reuse instead of creating a new user, use the below to get user session.
 
 ```
-Roam.getUser("GEOSPARK USER ID", object : RoamCallback {
+Roam.getUser("ROAM USER ID", object : RoamCallback {
       override fun onSuccess(roamUser: RoamUser) {
         // do something when get user success
         // access roam user id with roamUser.getUserId()
@@ -242,9 +242,9 @@ Roam.stopTracking()
 It will publish location data and these data will be sent to Roam servers for further processing and data will be saved in our database servers.
 
 ```
-val geoSparkPublish = RoamPublish.Builder()
+val roamPublish = roamPublish.Builder()
             .build()
-Roam.publishAndSave(geoSparkPublish)
+Roam.publishAndSave(roamPublish)
 ```
 
 To stop publishing locations.
