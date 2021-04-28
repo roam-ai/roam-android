@@ -49,7 +49,7 @@ Install the SDK to your project via `Gradle` in Android Studio, add the maven be
 ```
 repositories {
     maven {
-        url 'https://com-Roam-android.s3.amazonaws.com/'
+        url 'https://com-roam-android.s3.amazonaws.com/'
     }
 }
 ```
@@ -58,7 +58,7 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
- implementation 'com.roam.android:roam:0.0.1'
+ implementation 'com.roam.android:roam-android:0.0.1'
 }
 ```
 

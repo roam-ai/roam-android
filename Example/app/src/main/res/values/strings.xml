@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Roam Example</string>
+    <string name="getuser">Get user</string>
+    <string name="createuser">Create user</string>
+    <string name="enter_userid">Enter userId</string>
+    <string name="enter_description">Enter description</string>
+    <string name="tracking">Tracking</string>
+    <string name="high">Active</string>
+    <string name="balanced">Reactive</string>
+    <string name="batterysaver">Passive</string>
+    <string name="custom">Custom</string>
+    <string name="start_tracking">Start tracking</string>
+    <string name="stop_tracking">Stop tracking</string>
+    <string name="image">image</string>
+    <string name="trip">Trip</string>
+    <string name="create_trip">Create trip</string>
+    <string name="start_end_trip"><![CDATA[Start & End Trip]]></string>
+    <string name="deletetrip">Delete trip</string>
+    <string name="sync_trip">Sync trip</string>
+    <string name="logout">Logout</string>
+</resources>
