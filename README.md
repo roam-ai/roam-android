@@ -48,11 +48,7 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
-    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
-    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'com.roam.sdk:roam-android:0.0.1'
 }
 ```
 
@@ -60,7 +56,7 @@ Then sync Gradle.
 
 ### **Manual Installation**
 
-[Download](https://s3.amazonaws.com/roam-frameworks/Android/Roam.zip) and unzip Roam SDK
+[Download](https://github.com/roam-ai/roam-android/releases/download/0.0.1/Roam.zip) and unzip Roam SDK
 
 1. Open Android Studio and add the SDK `Roam.aar` as a module using File > New > New Module > Import .JAR/.AAR Package.
 2. Once Gradle is finished click File > Project Structure again.
@@ -72,12 +68,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
-    implementation("com.amazonaws:aws-android-sdk-iot:2.16.+@aar") {
-        exclude group: 'org.eclipse.paho', module: 'org.eclipse.paho.client.mqttv3'
-        transitive = true
-    }
-    implementation "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4"
-    implementation('com.amazonaws:aws-android-sdk-mobile-client:2.16.+@aar') { transitive = true }
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }
 ```
 
