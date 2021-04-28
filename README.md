@@ -32,16 +32,6 @@ To use the Android SDK in a project, add the SDK as a build dependency and sync 
 
 2. Select API 16: Android 4.1.0 (Jelly Bean) or higher and create a project
 
-3. After you create a new project, open Gradle Scripts > build.gradle (Project: <your_project>) and do the following:
-
-   1. Add the following to the build script {repositories {}} section of the build.gradle (Project)file:
-
-      ```
-      mavenCentral()
-      ```
-
-Sync and close build.gradle (Project: <your_project>)
-
 ### **Gradle Installation**
 
 Install the SDK to your project via `Gradle` in Android Studio, add the maven below in your `project build.gradle` file.
@@ -58,7 +48,11 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
- implementation 'com.roam.android:roam-android:0.0.1'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }
 ```
 
@@ -92,7 +86,7 @@ dependencies {
 Before initializing the SDK, the below must be imported.
 
 ```
-import com.roam.lib.Roam;
+import com.roam.sdk.Roam;
 ```
 
 After import, add the below code under the Application class `onCreate()` method. The SDK must be initialised before calling any of the other SDK methods.
