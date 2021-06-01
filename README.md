@@ -9,6 +9,12 @@
 This is the official [Roam](https://roam.ai) Android SDK developed and maintained by Roam B.V
 
 Note: Before you get started [signup to our dashboard](https://roam.ai) to get your API Keys.
+
+## Featured Apps 
+
+<a href="https://hugoapp.com"><img src="https://i.imgur.com/xRqznN9.png" width="100"></a>
+
+
 ## Quickstart
 
 The Roam Android SDK makes it quick and easy to build a location tracker for your Android app. We provide powerful and customizable tracking modes and features.
