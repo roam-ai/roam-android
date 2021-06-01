@@ -13,6 +13,9 @@ Note: Before you get started [signup to our dashboard](https://roam.ai) to get y
 ## Featured Apps 
 
 <a href="https://hugoapp.com"><img src="https://i.imgur.com/xRqznN9.png" width="100"></a>
+<a href="https://handy.la"><img src="https://i.imgur.com/EDGcldE.png" width="100"></a>
+<a href="https://pickerexpress.com"><img src="https://media.giphy.com/avatars/Picker_ec/lNLRCBxHo8BJ.png" width="100"></a>
+
 
 
 ## Quickstart
