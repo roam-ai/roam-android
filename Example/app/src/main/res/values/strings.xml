@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Roam Example</string>
+    <string name="app_name">RoamExample</string>
     <string name="getuser">Get user</string>
     <string name="createuser">Create user</string>
     <string name="enter_userid">Enter userId</string>
