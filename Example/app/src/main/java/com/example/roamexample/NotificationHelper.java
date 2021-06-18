@@ -1,4 +1,4 @@
-package com.roam.example;
+package com.example.roamexample;
 
 
 import android.app.Notification;
@@ -13,7 +13,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
 
-import com.roam.example.ui.MainActivity;
+import com.example.roamexample.ui.MainActivity;
 
 
 public class NotificationHelper {

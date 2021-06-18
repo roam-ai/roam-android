@@ -1,4 +1,6 @@
-package com.roam.example.ui;
+package com.example.roamexample.ui;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +12,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.roam.example.R;
-import com.roam.example.storage.RoamPreferences;
+import com.example.roamexample.R;
+import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.snackbar.Snackbar;
 import com.roam.sdk.Roam;
 import com.roam.sdk.RoamPublish;
@@ -30,6 +30,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        initialize();
+    }
+
+    private void initialize() {
         if (RoamPreferences.isSignedIn(this)) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
@@ -46,6 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -59,13 +65,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private void show() {
-        progressBar.setVisibility(View.VISIBLE);
-    }
 
-    private void hide() {
-        progressBar.setVisibility(View.GONE);
-    }
 
     private void createUser() {
         show();
@@ -73,14 +73,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Roam.createUser(edtDescription.getText().toString(), new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
-                Log.e("Roam UserId ", roamUser.getUserId());
+                Log.e("RoamUserId ", roamUser.getUserId());
                 toggleEvents();
             }
 
             @Override
-            public void onFailure(RoamError error) {
+            public void onFailure(RoamError roamError) {
                 hide();
-                showMsg(error.getMessage());
+                showMsg(roamError.getMessage());
             }
         });
     }
@@ -115,12 +115,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onSuccess(RoamUser roamUser) {
                 toggleListener();
+                Log.e("TAG", "toggleEvents:called" );
             }
 
             @Override
-            public void onFailure(RoamError error) {
+            public void onFailure(RoamError roamError) {
                 hide();
-                showMsg(error.getMessage());
+                showMsg(roamError.getMessage());
             }
         });
     }
@@ -130,6 +131,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Roam.toggleListener(true, true, new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
+               // Log.e("TAG", "toggleListener:called" );
                 // TODO: Step 6 : Subscribe to your userId to listen location updated from LocationReceiver.java
                 Roam.subscribe(Roam.Subscribe.LOCATION, roamUser.getUserId());
 
@@ -138,14 +140,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         .build();
                 Roam.publishAndSave(geoSparkPublish);
 
-
                 signedIn();
             }
 
             @Override
-            public void onFailure(RoamError error) {
+            public void onFailure(RoamError roamError) {
                 hide();
-                showMsg(error.getMessage());
+                showMsg(roamError.getMessage());
+                Log.e("TAG", "toggleListenerError: "+  "called");
             }
         });
     }
@@ -154,6 +156,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         RoamPreferences.setSignIn(LoginActivity.this, true);
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
+    }
+
+    private void show() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hide() {
+        progressBar.setVisibility(View.GONE);
     }
 
     private void showMsg(String msg) {

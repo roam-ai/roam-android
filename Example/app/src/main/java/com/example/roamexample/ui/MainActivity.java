@@ -1,4 +1,6 @@
-package com.roam.example.ui;
+package com.example.roamexample.ui;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,11 +13,9 @@ import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.roam.example.R;
-import com.roam.example.service.ForegroundService;
-import com.roam.example.storage.RoamPreferences;
+import com.example.roamexample.R;
+import com.example.roamexample.service.ForegroundService;
+import com.example.roamexample.storage.RoamPreferences;
 import com.roam.sdk.Roam;
 import com.roam.sdk.RoamTrackingMode;
 import com.roam.sdk.callback.RoamCreateTripCallback;
@@ -23,9 +23,7 @@ import com.roam.sdk.callback.RoamLogoutCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.createtrip.RoamCreateTrip;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private ProgressBar progressBar;
     private RadioGroup mRadioGroup;
     private CheckBox ckOffline;
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLogout.setOnClickListener(this);
         btnTrip.setOnClickListener(this);
         btnCreateTrip.setOnClickListener(this);
-
     }
 
     @Override
@@ -180,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case Roam.REQUEST_CODE_LOCATION_PERMISSION:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {

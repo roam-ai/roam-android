@@ -1,4 +1,8 @@
-package com.roam.example.ui;
+package com.example.roamexample.ui;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,14 +13,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-
+import com.example.roamexample.R;
+import com.example.roamexample.adapter.TripAdapter;
 import com.google.android.material.snackbar.Snackbar;
-import com.roam.example.R;
-import com.roam.example.adapter.TripAdapter;
 import com.roam.sdk.Roam;
 import com.roam.sdk.callback.RoamActiveTripsCallback;
 import com.roam.sdk.models.ActiveTrips;
@@ -25,8 +24,8 @@ import com.roam.sdk.models.RoamTrip;
 
 import java.util.List;
 
-
 public class TripActivity extends AppCompatActivity {
+
     private ProgressBar progressbar;
     private TripAdapter adapter;
     private TextView snackBar;
@@ -36,6 +35,7 @@ public class TripActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip);
+
         offline = getIntent().getBooleanExtra("OFFLINE", false);
         adapter = new TripAdapter(this);
         progressbar = findViewById(R.id.progressbar);
@@ -52,6 +52,7 @@ public class TripActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         checkPermissions();
     }
+
 
     private void checkPermissions() {
         if (!Roam.checkLocationServices()) {
@@ -99,6 +100,7 @@ public class TripActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case Roam.REQUEST_CODE_LOCATION_PERMISSION:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -132,6 +134,3 @@ public class TripActivity extends AppCompatActivity {
         }
     }
 }
-
-
-

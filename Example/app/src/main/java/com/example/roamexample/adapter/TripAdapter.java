@@ -1,4 +1,4 @@
-package com.roam.example.adapter;
+package com.example.roamexample.adapter;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.roam.example.R;
-import com.roam.example.ui.TripActivity;
+import com.example.roamexample.R;
+import com.example.roamexample.ui.TripActivity;
 import com.roam.sdk.Roam;
 import com.roam.sdk.callback.RoamDeleteTripCallback;
 import com.roam.sdk.callback.RoamSyncTripCallback;
