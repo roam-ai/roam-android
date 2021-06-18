@@ -9,7 +9,6 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        // Roam.initialize(this, "YOUR-PUBLISHABLE-KEY");
-        Roam.initialize(this, "ca2beca8b0c0135a3b29957d8dcb252dbb9eb2d45f83523e94df3c24eb2ec2d7");
+         Roam.initialize(this, "YOUR-PUBLISHABLE-KEY");
     }
 }
