@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.roamexample.R;
+import com.example.roamexample.service.LocationReceiver;
 import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.snackbar.Snackbar;
 import com.roam.sdk.Roam;

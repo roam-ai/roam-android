@@ -17,10 +17,13 @@ import com.example.roamexample.R;
 import com.example.roamexample.service.ForegroundService;
 import com.example.roamexample.storage.RoamPreferences;
 import com.roam.sdk.Roam;
+import com.roam.sdk.RoamPublish;
 import com.roam.sdk.RoamTrackingMode;
+import com.roam.sdk.callback.RoamCallback;
 import com.roam.sdk.callback.RoamCreateTripCallback;
 import com.roam.sdk.callback.RoamLogoutCallback;
 import com.roam.sdk.models.RoamError;
+import com.roam.sdk.models.RoamUser;
 import com.roam.sdk.models.createtrip.RoamCreateTrip;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // TODO: Step 9 : Choose tracking mode and  Start tracking.
     private void startTracking() {
         int selectedId = mRadioGroup.getCheckedRadioButtonId();
+        publishAndSubsribe();
         if (selectedId == R.id.rbOption1) {
             Roam.startTracking(RoamTrackingMode.ACTIVE);
             trackingStatus();
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Roam.startTracking(RoamTrackingMode.PASSIVE);
             trackingStatus();
         } else if (selectedId == R.id.rbOption4) {
-            RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(30)
+            RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(5)
                     .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                     .build();
             Roam.startTracking(roamTrackingMode);
@@ -112,6 +116,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             Toast.makeText(this, "Select tracking options", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void publishAndSubsribe() {
+        Roam.toggleListener(true, true, new RoamCallback() {
+            @Override
+            public void onSuccess(RoamUser roamUser) {
+                Roam.subscribe(Roam.Subscribe.LOCATION, roamUser.getUserId());
+                RoamPublish geoSparkPublish = new RoamPublish.Builder()
+                        .build();
+                Roam.publishAndSave(geoSparkPublish);
+            }
+
+            @Override
+            public void onFailure(RoamError roamError) {
+
+            }
+        });
     }
 
     // TODO: Step 10 : Stop tracking
