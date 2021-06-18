@@ -1,4 +1,4 @@
-package com.roam.example.storage;
+package com.example.roamexample.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -1,4 +1,4 @@
-package com.roam.example;
+package com.example.roamexample;
 
 import android.app.Application;
 
@@ -9,6 +9,6 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Roam.initialize(this, "YOUR-PUBLISHABLE-KEY");
+         Roam.initialize(this, "YOUR-PUBLISHABLE-KEY");
     }
 }

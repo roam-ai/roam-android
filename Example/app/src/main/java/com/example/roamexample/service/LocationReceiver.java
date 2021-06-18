@@ -1,4 +1,4 @@
-package com.roam.example.service;
+package com.example.roamexample.service;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,9 +16,11 @@ public class LocationReceiver extends RoamReceiver {
         Log.e("Location", "Lat " + roamLocation.getLocation().getLatitude() + " Lng " + roamLocation.getLocation().getLongitude());
     }
 
+
     @Override
     public void onError(Context context, RoamError roamError) {
-        Log.e("Location", roamError.getMessage());
+        Log.e("onLocationUpdated", roamError.getMessage());
     }
+
 }
 
