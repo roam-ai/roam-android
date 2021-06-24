@@ -10,7 +10,7 @@ This is the official [Roam](https://roam.ai) Android SDK developed and maintaine
 
 Note: Before you get started [signup to our dashboard](https://roam.ai) to get your API Keys.
 
-## Featured Apps 
+## Featured Apps
 
 <a href="https://hugoapp.com"><img src="https://i.imgur.com/xRqznN9.png" width="100"></a>
 <a href="https://handy.la"><img src="https://i.imgur.com/EDGcldE.png" width="100"></a>
@@ -57,7 +57,7 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
-    implementation 'com.roam.sdk:roam-android:0.0.1'
+    implementation 'com.roam.sdk:roam-android:0.0.3'
 }
 ```
 
