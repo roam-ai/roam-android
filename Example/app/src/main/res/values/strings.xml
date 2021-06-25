@@ -5,6 +5,7 @@
     <string name="enter_userid">Enter userId</string>
     <string name="enter_description">Enter description</string>
     <string name="tracking">Tracking</string>
+    <string name="choose_tracking">Choose Tracking Option</string>
     <string name="high">Active</string>
     <string name="balanced">Reactive</string>
     <string name="batterysaver">Passive</string>
@@ -18,4 +19,12 @@
     <string name="deletetrip">Delete trip</string>
     <string name="sync_trip">Sync trip</string>
     <string name="logout">Logout</string>
+    <string name="custom_accuracy">Custom Accuracy Engine</string>
+    <string name="default_accuracy">Default Accuracy Engine</string>
+
+    <string name="listener">Subscribe</string>
+    <string name="subscribe_events">Subscribe Events</string>
+    <string name="events_listener">Events Listener</string>
+    <string name="location_listener">Location Listener</string>
+    <string name="subscribe_location">Subscribe location</string>
 </resources>

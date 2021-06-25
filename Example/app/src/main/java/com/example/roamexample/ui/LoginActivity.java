@@ -74,7 +74,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Roam.createUser(edtDescription.getText().toString(), new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
-                Log.e("RoamUserId ", roamUser.getUserId());
+               // Log.e("RoamUserId ", roamUser.getUserId());
+                RoamPreferences.setUserId(LoginActivity.this, roamUser.getUserId());
                 toggleEvents();
             }
 
@@ -96,7 +97,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Roam.getUser(text, new RoamCallback() {
                 @Override
                 public void onSuccess(RoamUser roamUser) {
-                    Log.e("Roam UserId ", roamUser.getUserId());
+                    //Log.e("Roam UserId ", roamUser.getUserId());
+                    RoamPreferences.setUserId(LoginActivity.this, roamUser.getUserId());
                     hide();
                     toggleEvents();
                 }
@@ -132,14 +134,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Roam.toggleListener(true, true, new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
-               // Log.e("TAG", "toggleListener:called" );
-                // TODO: Step 6 : Subscribe to your userId to listen location updated from LocationReceiver.java
-                Roam.subscribe(Roam.Subscribe.LOCATION, roamUser.getUserId());
-
-                // TODO: Step 7 : Publish and save location in Roam Backend.
-                RoamPublish geoSparkPublish = new RoamPublish.Builder()
-                        .build();
-                Roam.publishAndSave(geoSparkPublish);
 
                 signedIn();
             }
@@ -155,7 +149,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void signedIn() {
         RoamPreferences.setSignIn(LoginActivity.this, true);
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), ToggleActivity.class));
         finish();
     }
 
