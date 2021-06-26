@@ -359,7 +359,7 @@ Once the listener toggles are set to true, to listen to location updates and eve
                     android:enabled="true"
                     android:exported="false">
          <intent-filter>
-         <action android:name="com.geospark.android.RECEIVED"/>
+         <action android:name="com.roam.android.RECEIVED"/>
          </intent-filter>
      </receiver>
          ...
