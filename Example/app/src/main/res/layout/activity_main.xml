@@ -42,7 +42,7 @@
                 android:gravity="center|start"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="@string/tracking"
+                android:text="Mock Location"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -51,7 +51,8 @@
                 android:id="@+id/radioGroup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
 
                 <RadioButton
                     android:id="@+id/rbOption1"
@@ -87,22 +88,188 @@
                     android:id="@+id/rbOption4"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_gravity="start"
                     android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
                     android:checked="false"
                     android:text="Time between location"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    />
 
                 <RadioButton
                     android:id="@+id/rbOption5"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_gravity="start"
                     android:layout_marginTop="20dp"
+                    android:layout_gravity="start"
                     android:checked="false"
                     android:text="Distance between location"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    />
+
+
             </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:weightSum="1"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/edtTime"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:gravity="center|start"
+                    android:hint="time in seconds"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtDist"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:gravity="center|start"
+                    android:hint="Dist. in meters"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/ckMock"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:text="AllowMockLocation" />
+
+            <TextView
+                android:id="@+id/txtAccuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/default_accuracy"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/ckFilter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="AccuracyEngine" />
+
+            <TextView
+                android:id="@+id/txtCustAccuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center|start"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/custom_accuracy"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/edtAccuracyFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/bg_edit_text"
+                    android:gravity="center|start"
+                    android:hint="1 - 150"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCustomAccuracyEnable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/bg_button_enable"
+                    android:text="Set Accuracy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/listener"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+            <CheckBox
+                android:id="@+id/ckToggleEvents"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/subscribe_events"
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/ckToggleLocation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/subscribe_location"
+                android:visibility="gone"/>
 
             <TableRow
                 android:layout_width="match_parent"
@@ -144,7 +311,7 @@
                 android:paddingRight="10dp"
                 android:text="@string/trip"
                 android:textColor="@color/colorBlack"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <CheckBox
@@ -199,4 +366,9 @@
         android:layout_centerInParent="true"
         android:indeterminateTint="@color/colorProgress"
         android:visibility="gone" />
+    <TextView
+        android:id="@+id/snackBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

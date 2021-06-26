@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ToggleActivity">
+
+    <LinearLayout
+        android:id="@+id/llListener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swLocListener"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location Listener"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swEventListener"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Event Listener"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="'Once you enable the Listener then only Subscribe'"
+        android:layout_below="@+id/llListener"
+       android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMessage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSubscribeEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Subcribe Events"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSubscribeLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subscribe Locations"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_button_enable"
+        android:text="Next"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</RelativeLayout>
