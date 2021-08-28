@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void createUser() {
         show();
         // TODO: Step 3 : Create user
-        Roam.createUser(edtDescription.getText().toString(), new RoamCallback() {
+        Roam.createUser(edtDescription.getText().toString(),null, new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
                // Log.e("RoamUserId ", roamUser.getUserId());

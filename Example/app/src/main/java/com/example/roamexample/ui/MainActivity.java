@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void createTrip() {
         show();
-        Roam.createTrip(null, null, ckOffline.isChecked(), new RoamCreateTripCallback() {
+        Roam.createTrip(null, null, ckOffline.isChecked(), null, new RoamCreateTripCallback() {
             @Override
             public void onSuccess(RoamCreateTrip geoSparkCreateTrip) {
                 hide();

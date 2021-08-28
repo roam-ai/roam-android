@@ -9,6 +9,6 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-         Roam.initialize(this, "a13a4f2ed097203df42abd6c9261cde373bdef14cc4c9437705645700f490a11");
+         Roam.initialize(this, "5cf6ce67cb5c75fd56941bea1fd514cdd62319eb1dd664ee0321c97e04f49b8f");
     }
 }

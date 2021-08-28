@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamLocation;
+import com.roam.sdk.models.events.RoamEvent;
 import com.roam.sdk.service.RoamReceiver;
 
 
@@ -14,6 +15,12 @@ public class LocationReceiver extends RoamReceiver {
     public void onLocationUpdated(Context context, RoamLocation roamLocation) {
         super.onLocationUpdated(context, roamLocation);
         Log.e("Location", "Lat " + roamLocation.getLocation().getLatitude() + " Lng " + roamLocation.getLocation().getLongitude());
+    }
+
+    @Override
+    public void onEventReceived(Context context, RoamEvent roamEvent) {
+        super.onEventReceived(context, roamEvent);
+        Log.e("Event", "Geofence Id:  " + roamEvent.getGeofence_id() + " Event Type:  " + roamEvent.getEvent_type());
     }
 
 

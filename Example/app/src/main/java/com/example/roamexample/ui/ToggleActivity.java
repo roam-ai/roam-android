@@ -89,6 +89,7 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
                     RoamPublish geoSparkPublish = new RoamPublish.Builder()
                             .build();
                     Roam.publishAndSave(geoSparkPublish);
+                    Roam.subscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
                 } else {
                     Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
                 }
