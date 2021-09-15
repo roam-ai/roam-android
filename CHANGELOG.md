@@ -25,3 +25,8 @@ Modified:
 Make startTrip independent by combining it with startTracking and createTrip methods
 Added:
 `metadata` support for users and trips are added
+
+## 0.0.6
+
+Fixed:
+Location receiver when location was updated without `metadata`
