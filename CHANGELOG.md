@@ -18,3 +18,10 @@ Modified:
 - #11 Allow meta-data support for updating location ie. updateCurrentLocation method
 Removed:
 - #9 Combine startTracking and startSelfTracking methods
+
+## 0.0.5
+
+Modified:
+Make startTrip independent by combining it with startTracking and createTrip methods
+Added:
+`metadata` support for users and trips are added

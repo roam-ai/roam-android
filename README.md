@@ -63,7 +63,7 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
-    implementation 'com.roam.sdk:roam-android:0.0.4'
+    implementation 'com.roam.sdk:roam-android:0.0.5'
 }
 ```
 
