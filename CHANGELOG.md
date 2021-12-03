@@ -54,3 +54,11 @@ Modified:
 
 Modified:
 Removed user id validation for offline trips in createTrip method.
+
+## 0.0.11
+
+Added:
+- Initialize validation in each method.
+
+Modified:
+- Removed location permission status update.
