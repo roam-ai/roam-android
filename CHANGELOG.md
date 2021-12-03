@@ -39,4 +39,13 @@ Added support to listen to location updates of user from different projects whic
 ## 0.0.8
 
 Added:
-Added support to listen to location permision status in receiver class when location permission is changed.
+Added support to listen the location permission status in receiver class when location permission is changed.
+
+## 0.0.9
+
+Added:
+- Foreground service notification in SDK.
+- Elevation gain support for offline trips.
+
+Removed:
+- User id validation for offline trips.
