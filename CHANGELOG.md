@@ -30,3 +30,8 @@ Added:
 
 Fixed:
 Location receiver when location was updated without `metadata`
+
+## 0.0.7
+
+Added:
+Added support to listen to location updates of user from different projects which are within same account.
