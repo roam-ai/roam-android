@@ -34,12 +34,12 @@ Location receiver when location was updated without `metadata`
 ## 0.0.7
 
 Added:
-Added support to listen to location updates of user from different projects which are within same account.
+Support to listen to location updates of user from different projects which are within same account.
 
 ## 0.0.8
 
 Added:
-Added support to listen the location permission status in receiver class when location permission is changed.
+Support to listen the location permission status in receiver class when location permission is changed.
 
 ## 0.0.9
 
@@ -47,5 +47,10 @@ Added:
 - Foreground service notification in SDK.
 - Elevation gain support for offline trips.
 
-Removed:
-- User id validation for offline trips.
+Modified:
+- Removed user id validation for offline trips.
+
+## 0.0.10
+
+Modified:
+Removed user id validation for offline trips in createTrip method.
