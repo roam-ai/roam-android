@@ -35,3 +35,8 @@ Location receiver when location was updated without `metadata`
 
 Added:
 Added support to listen to location updates of user from different projects which are within same account.
+
+## 0.0.8
+
+Added:
+Added support to listen to location permision status in receiver class when location permission is changed.
