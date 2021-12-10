@@ -62,3 +62,8 @@ Added:
 
 Modified:
 - Removed location permission status update.
+
+## 0.0.12
+
+Fixed:
+- The Roam SDK installation support for android 12.
