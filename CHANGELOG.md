@@ -67,3 +67,8 @@ Modified:
 
 Fixed:
 - The Roam SDK installation support for android 12.
+
+## 0.0.13
+
+Fixed:
+- The foreground notification method support for android 12.
