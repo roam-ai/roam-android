@@ -2,6 +2,7 @@ package com.example.roamexample.service;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamLocation;
@@ -15,6 +16,8 @@ public class LocationReceiver extends RoamReceiver {
     public void onLocationUpdated(Context context, RoamLocation roamLocation) {
         super.onLocationUpdated(context, roamLocation);
         Log.e("Location", "Lat " + roamLocation.getLocation().getLatitude() + " Lng " + roamLocation.getLocation().getLongitude());
+        Toast.makeText(context, "Location: "+"Lat: "+roamLocation.getLocation().getLatitude() +" Lng: "+roamLocation.getLocation().getLongitude(), Toast.LENGTH_SHORT).show();
+
     }
 
     @Override

@@ -25,6 +25,7 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
     private SwitchCompat swEventListener;
     private SwitchCompat swSubscribeLoc;
     private SwitchCompat swSubscribeEvents;
+    private SwitchCompat swNotification;
 
     private TextView btnNext;
 
@@ -44,6 +45,7 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
         swEventListener = findViewById(R.id.swEventListener);
         swSubscribeLoc = findViewById(R.id.swSubscribeLoc);
         swSubscribeEvents = findViewById(R.id.swSubscribeEvents);
+        swNotification = findViewById(R.id.swNotification);
 
         btnNext = findViewById(R.id.btnNext);
 
@@ -51,6 +53,7 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
         swEventListener.setOnClickListener(ToggleActivity.this);
         swSubscribeLoc.setOnClickListener(ToggleActivity.this);
         swSubscribeEvents.setOnClickListener(ToggleActivity.this);
+        swNotification.setOnClickListener(ToggleActivity.this);
         btnNext.setOnClickListener(ToggleActivity.this);
     }
 
@@ -93,6 +96,17 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
                 } else {
                     Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
                 }
+                break;
+
+
+
+            case R.id.swNotification:
+                if (swNotification.isChecked()) {
+                    Roam.setForegroundNotification(true,"Roam Example","Click here to redirect the app",
+                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity");
+                } else {
+                    Roam.setForegroundNotification(false,"Roam Example","Click here to redirect the app",
+                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity");                }
                 break;
 
             case R.id.btnNext:
