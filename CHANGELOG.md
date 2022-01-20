@@ -72,3 +72,12 @@ Fixed:
 
 Fixed:
 - The foreground notification method support for android 12.
+
+## 0.0.14
+
+Added:
+- Battery status and network status field along with location update data in receiver class.
+- New feature to unsubscribe more than one user's location.
+
+Fixed:
+- Restrcited invalid location update.
