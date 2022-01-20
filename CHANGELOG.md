@@ -81,3 +81,8 @@ Added:
 
 Fixed:
 - Restrcited invalid location update.
+
+## 0.0.15
+
+Fixed:
+- Elevation gain logical error.
