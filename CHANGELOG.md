@@ -86,3 +86,8 @@ Fixed:
 
 Fixed:
 - Elevation gain logical error.
+
+## 0.0.16
+
+Fixed:
+- Stationary location update issue.
