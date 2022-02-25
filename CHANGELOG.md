@@ -91,3 +91,8 @@ Fixed:
 
 Fixed:
 - Stationary location update issue.
+
+## 0.0.17
+
+Modified:
+- MQTT keep alive time interval.
