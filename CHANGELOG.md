@@ -96,3 +96,8 @@ Fixed:
 
 Modified:
 - MQTT keep alive time interval.
+
+## 0.1.0
+
+Modified:
+- Updated new trip v2 methods. Refer Migration guide for more details.
