@@ -95,7 +95,7 @@ Fixed:
 ## 0.0.17
 
 Modified:
-- MQTT keep alive time interval.
+- Connection configuration for security and performance.
 
 ## 0.1.0
 
