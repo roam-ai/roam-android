@@ -15,8 +15,8 @@ public class LocationReceiver extends RoamReceiver {
     @Override
     public void onLocationUpdated(Context context, RoamLocation roamLocation) {
         super.onLocationUpdated(context, roamLocation);
-        Log.e("Location", "Lat " + roamLocation.getLocation().getLatitude() + " Lng " + roamLocation.getLocation().getLongitude());
-        Toast.makeText(context, "Location: "+"Lat: "+roamLocation.getLocation().getLatitude() +" Lng: "+roamLocation.getLocation().getLongitude(), Toast.LENGTH_SHORT).show();
+        Log.e("MyLocation", "Lat " + roamLocation.getLocation().getLatitude() + " Lng " + roamLocation.getLocation().getLongitude());
+      //  Toast.makeText(context, "Location: "+"Lat: "+roamLocation.getLocation().getLatitude() +" Lng: "+roamLocation.getLocation().getLongitude(), Toast.LENGTH_SHORT).show();
 
     }
 

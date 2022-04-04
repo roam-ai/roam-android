@@ -41,6 +41,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation "com.google.android.material:material:1.1.0"
     // TODO: Step 1 : Install SDK
-    implementation 'com.roam.sdk:roam-android:0.0.13'
+  //  implementation 'com.roam.sdk:roam-android:0.0.13'
+    implementation 'com.roam.sdk:roam-android:0.0.17'
 
 }
