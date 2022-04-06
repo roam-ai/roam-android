@@ -101,3 +101,8 @@ Modified:
 
 Modified:
 - Updated new trip v2 methods. Refer Migration guide for more details.
+
+## 0.0.18
+
+Fixed:
+- optimised location update by removing noise locations update when device gets idle.
