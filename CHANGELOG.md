@@ -106,3 +106,8 @@ Modified:
 
 Fixed:
 - optimised location update by removing noise locations update when device gets idle.
+
+## 0.0.19
+
+Modified:
+- made RoamPublish param as optional in updateCurrentLocation method. 
