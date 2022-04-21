@@ -111,3 +111,8 @@ Fixed:
 
 Modified:
 - made RoamPublish param as optional in updateCurrentLocation method. 
+
+## 0.0.20
+
+Fixed:
+- time based tracking issue. 
