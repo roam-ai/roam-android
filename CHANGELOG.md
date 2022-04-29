@@ -121,7 +121,7 @@ Fixed:
 
 Added:
 - Batch location update feature.
-- Location count in offline trip api sync and trip control api.
+- Location count in offline trip sync api and trip control api.
 
 Modified:
 - Trip error code response. 
