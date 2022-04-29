@@ -116,3 +116,12 @@ Modified:
 
 Fixed:
 - time based tracking issue. 
+
+## 0.0.21
+
+Added:
+- Batch location update feature.
+- Location count in offline trip api sync and trip control api.
+
+Modified:
+- Trip error code response. 
