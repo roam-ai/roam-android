@@ -125,3 +125,8 @@ Added:
 
 Modified:
 - Trip error code response. 
+
+## 0.0.22
+
+Added:
+- Connectivity change listener method.
