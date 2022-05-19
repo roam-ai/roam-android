@@ -130,3 +130,11 @@ Modified:
 
 Added:
 - Connectivity change listener method.
+
+## 0.0.23
+
+Added:
+- Batch location update feature for trip.
+
+Fixed:
+- location listener and connectivity change listener when device gets reboot. 
