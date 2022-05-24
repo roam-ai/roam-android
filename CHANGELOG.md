@@ -138,3 +138,9 @@ Added:
 
 Fixed:
 - location listener and connectivity change listener when device gets reboot. 
+
+## 0.0.24
+
+Fixed:
+- Location drift issue. 
+- Reciever intent unsubscribe issue. 
