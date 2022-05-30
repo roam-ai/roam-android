@@ -144,3 +144,8 @@ Fixed:
 Fixed:
 - Location drift issue. 
 - Reciever intent unsubscribe issue. 
+
+## 0.1.1
+
+Fixed:
+- Quick trip response.
