@@ -154,4 +154,4 @@ Fixed:
 
 Added:
 - Unsubscribe trip method for multiple trips. 
-- Timestamp field in trip status listener. 
+- Timestamp field in trip status listener.  
