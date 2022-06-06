@@ -149,3 +149,9 @@ Fixed:
 
 Fixed:
 - Quick trip response.
+
+## 0.0.25
+
+Added:
+- Unsubscribe trip method for multiple trips. 
+- Timestamp field in trip status listener. 
