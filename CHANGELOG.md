@@ -155,3 +155,8 @@ Fixed:
 Added:
 - Unsubscribe trip method for multiple trips. 
 - Timestamp field in trip status listener.  
+
+## 0.0.26
+
+Added:
+- Tracking configuration method for location accuracy improvement.
