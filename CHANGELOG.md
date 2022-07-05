@@ -160,3 +160,9 @@ Added:
 
 Added:
 - Tracking configuration method for location accuracy improvement.
+
+## 0.0.27
+
+Fixed:
+- Locations keep updating when device gets idle in distance based tracking.
+- Offline trip events order/timestamp.
