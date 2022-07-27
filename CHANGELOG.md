@@ -166,3 +166,9 @@ Added:
 Fixed:
 - Locations keep updating when device gets idle in distance based tracking.
 - Offline trip events order/timestamp.
+
+## 0.0.28
+
+Fixed:
+- Location update gap in distance based tracking.
+- Stationary noise location update when device gets stationary.
