@@ -172,3 +172,9 @@ Fixed:
 Fixed:
 - Location update gap in distance based tracking.
 - Stationary noise location update when device gets stationary.
+
+## 0.1.2
+
+Added:
+
+- Course field for offline trips.
