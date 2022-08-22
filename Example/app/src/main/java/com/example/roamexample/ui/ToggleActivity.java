@@ -103,10 +103,10 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.swNotification:
                 if (swNotification.isChecked()) {
                     Roam.setForegroundNotification(true,"Roam Example","Click here to redirect the app",
-                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity");
+                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity","com.example.roamexample.service.ForegroundService");
                 } else {
                     Roam.setForegroundNotification(false,"Roam Example","Click here to redirect the app",
-                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity");                }
+                            R.drawable.ic_geospark,"com.example.roamexample.ui.MainActivity","com.example.roamexample.service.ForegroundService");                }
                 break;
 
             case R.id.btnNext:
