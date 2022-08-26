@@ -178,3 +178,28 @@ Fixed:
 Added:
 
 - Course field for offline trips.
+
+## 0.1.3
+
+Added:
+
+- There should be a locations count field.
+- Batch update support for trip listener.
+- Batch update support for location listener.
+- Network listener method for connectivity change.
+
+Modified:
+
+- Create trip method should support create trip without user id.
+- Subscribe trip method should support online trip.
+- Update trip method should be based on trip state.
+- Sync trip should have speed parameter.
+- Roam trip status should have trip state as parameter.
+- Unsubscribe trip method support for multiple trips.
+- Update time stamp field in trip listener.
+- Trip status code for control trip .
+
+Fixed:
+
+- Offline trip reached_stop and left stop event are not getting called.
+- Drift issue fix.
