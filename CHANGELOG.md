@@ -203,3 +203,10 @@ Fixed:
 
 - Offline trip reached_stop and left stop event are not getting called.
 - Drift issue fix.
+
+## 0.0.29
+
+Fixed:
+- Location update gap in stationary location update.
+- Location update when device gets restart.
+- Tracking config logic for time base tracking.
