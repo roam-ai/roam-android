@@ -210,3 +210,8 @@ Fixed:
 - Location update gap in stationary location update.
 - Location update when device gets restart.
 - Tracking config logic for time base tracking.
+
+## 0.0.30
+
+Fixed:
+- The execution order of MQTT connection and createUser or getUser method's callback.
