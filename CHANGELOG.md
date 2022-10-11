@@ -215,3 +215,8 @@ Fixed:
 
 Fixed:
 - The execution order of MQTT connection and createUser or getUser method's callback.
+
+## 0.1.4
+
+Fixed:
+- Noise location update for distance based tracking and stationary location update.
