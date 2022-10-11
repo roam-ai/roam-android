@@ -21,6 +21,9 @@ import com.roam.sdk.callback.RoamActiveTripsCallback;
 import com.roam.sdk.models.ActiveTrips;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamTrip;
+import com.roam.sdk.trips_v2.models.Error;
+import com.roam.sdk.trips_v2.models.RoamActiveTripsResponse;
+import com.roam.sdk.trips_v2.models.Trips;
 
 import java.util.List;
 
@@ -76,19 +79,18 @@ public class TripActivity extends AppCompatActivity {
 
     public void refreshList() {
         show();
-        Roam.activeTrips(offline, new RoamActiveTripsCallback() {
+        Roam.getActiveTrips(offline, new com.roam.sdk.trips_v2.callback.RoamActiveTripsCallback() {
             @Override
-            public void onSuccess(RoamTrip geoSparkTrip) {
+            public void onSuccess(RoamActiveTripsResponse roamActiveTripsResponse) {
                 hide();
-                List<ActiveTrips> activeTrips = geoSparkTrip.getActiveTrips();
-                if (activeTrips.size() != 0) {
-                    activeTrips.get(0).getSyncStatus();
+                List<Trips> activeTrips = roamActiveTripsResponse.getTrips();
+                if (activeTrips.size() != 0){
                     adapter.addList(activeTrips);
                 }
             }
 
             @Override
-            public void onFailure(RoamError error) {
+            public void onError(Error error) {
                 hide();
             }
         });

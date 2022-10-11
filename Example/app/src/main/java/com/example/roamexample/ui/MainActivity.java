@@ -24,6 +24,7 @@ import com.example.roamexample.service.ForegroundService;
 import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 import com.roam.sdk.Roam;
 import com.roam.sdk.RoamPublish;
 import com.roam.sdk.RoamTrackingMode;
@@ -33,6 +34,10 @@ import com.roam.sdk.callback.RoamLogoutCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamUser;
 import com.roam.sdk.models.createtrip.RoamCreateTrip;
+import com.roam.sdk.trips_v2.RoamTrip;
+import com.roam.sdk.trips_v2.callback.RoamTripCallback;
+import com.roam.sdk.trips_v2.models.Error;
+import com.roam.sdk.trips_v2.models.RoamTripResponse;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private ProgressBar progressBar;
@@ -163,7 +168,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !Roam.checkBackgroundLocationPermission()) {
             Roam.requestBackgroundLocationPermission(this);
         } else {
-           // startTracking();
             callBottomDialoge();
         }
     }
@@ -229,17 +233,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void createTrip() {
         show();
-        Roam.createTrip(null, null, ckOffline.isChecked(), null, new RoamCreateTripCallback() {
+        Log.e("TAG", "createTrip: " + RoamPreferences.getUserId(MainActivity.this, "userId"));
+        RoamTrip roamTrip = new RoamTrip.Builder()
+                .setTripDescription("Test Trip")
+                .setIsLocal(ckOffline.isChecked())
+                .build();
+        Roam.createTrip(roamTrip, new RoamTripCallback() {
             @Override
-            public void onSuccess(RoamCreateTrip geoSparkCreateTrip) {
+            public void onSuccess(RoamTripResponse roamTripResponse) {
+                Log.e("TAG", "onSuccess: " + new Gson().toJson(roamTripResponse));
                 hide();
             }
 
             @Override
-            public void onFailure(RoamError status) {
+            public void onError(Error error) {
+                Log.e("TAG", "onError: " + new Gson().toJson(error));
                 hide();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startService(new Intent(this, ForegroundService.class));
     }
 
     private void trackingStatus() {

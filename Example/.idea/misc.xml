@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_toggle.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout/activity_trip.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/item_trip.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>

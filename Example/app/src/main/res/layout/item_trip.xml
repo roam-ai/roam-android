@@ -76,21 +76,7 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txt_force_stop"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@+id/txt_stop"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:ellipsize="end"
-            android:gravity="center|right"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="ForceStop"
-            android:textColor="@color/colorBlack"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+
 
         <ProgressBar
             android:id="@+id/progressBar"

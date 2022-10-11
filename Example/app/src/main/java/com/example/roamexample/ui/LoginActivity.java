@@ -74,7 +74,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Roam.createUser(edtDescription.getText().toString(),null, new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
-               // Log.e("RoamUserId ", roamUser.getUserId());
                 RoamPreferences.setUserId(LoginActivity.this, roamUser.getUserId());
                 toggleEvents();
             }
@@ -97,7 +96,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Roam.getUser(text, new RoamCallback() {
                 @Override
                 public void onSuccess(RoamUser roamUser) {
-                    //Log.e("Roam UserId ", roamUser.getUserId());
                     RoamPreferences.setUserId(LoginActivity.this, roamUser.getUserId());
                     hide();
                     toggleEvents();
