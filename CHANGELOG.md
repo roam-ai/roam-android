@@ -220,3 +220,8 @@ Fixed:
 
 Fixed:
 - Noise location update for distance based tracking and stationary location update.
+
+## 0.0.31
+
+Added:
+- Support for Roam.initialize() with custom configurations. 
