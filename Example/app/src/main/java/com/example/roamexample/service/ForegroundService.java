@@ -3,7 +3,6 @@ package com.example.roamexample.service;
 import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Build;
 import android.os.IBinder;
 
 
@@ -18,7 +17,6 @@ public class ForegroundService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-
         register();
 
     }
@@ -48,4 +46,7 @@ public class ForegroundService extends Service {
             unregisterReceiver(mLocationReceiver);
         }
     }
+
+
+
 }
