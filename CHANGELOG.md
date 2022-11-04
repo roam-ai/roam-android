@@ -225,3 +225,8 @@ Fixed:
 
 Added:
 - Support for Roam.initialize() with custom configurations. 
+
+## 0.0.32
+
+Added:
+- Meta data support for setDescription method. 
