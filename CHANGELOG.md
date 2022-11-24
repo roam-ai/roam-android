@@ -230,3 +230,8 @@ Added:
 
 Added:
 - Meta data support for setDescription method. 
+
+## 0.0.33
+
+Added:
+- Magnetic bearing feature in location update listener. 
