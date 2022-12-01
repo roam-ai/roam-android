@@ -235,3 +235,11 @@ Added:
 
 Added:
 - Magnetic bearing feature in location update listener. 
+
+## 0.1.5
+
+Added:
+- Magnetic bearing support.
+- Meta data support for setDescription method.
+- Tracking config feature.
+- App service class parameter to setForegroundNotification method.
