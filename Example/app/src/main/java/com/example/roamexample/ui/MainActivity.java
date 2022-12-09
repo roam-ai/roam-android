@@ -1,7 +1,12 @@
 package com.example.roamexample.ui;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -163,9 +168,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !Roam.checkBackgroundLocationPermission()) {
             Roam.requestBackgroundLocationPermission(this);
         } else {
-           // startTracking();
             callBottomDialoge();
         }
+
+
+        //for firebase campaign notification
+        String deviceToken = getSharedPreferences("_", MODE_PRIVATE).getString("fcm_token", "empty");
+        Log.d("DeviceToken", deviceToken);
+        Roam.setDeviceToken(deviceToken);
     }
 
     // TODO: Step 9 : Choose tracking mode and  Start tracking.

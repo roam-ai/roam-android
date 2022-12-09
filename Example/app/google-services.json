@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95287825693",
+    "project_id": "roamexample-83f7b",
+    "storage_bucket": "roamexample-83f7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95287825693:android:f1526b44afd5f160b3bdf4",
+        "android_client_info": {
+          "package_name": "com.example.roamexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95287825693-rql1tnph222bf64phs79g9pbr3bnsqun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFvGSVRjm3kJQZIfbl6H5eJpXJdmRu-yE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95287825693-rql1tnph222bf64phs79g9pbr3bnsqun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

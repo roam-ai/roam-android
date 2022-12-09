@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.roamexample"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -40,8 +40,13 @@ dependencies {
     //Design
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation "com.google.android.material:material:1.1.0"
+   // implementation 'com.google.android.gms:play-services:11.0.0'
+    //Firebase
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+    //implementation 'com.google.android.gms:play-services-location:21.0.1'
     // TODO: Step 1 : Install SDK
-  //  implementation 'com.roam.sdk:roam-android:0.0.13'
-    implementation 'com.roam.sdk:roam-android:0.0.28'
+    implementation 'com.roam.sdk:roam-android:0.0.32'
+
 
 }
+apply plugin: 'com.google.gms.google-services'
