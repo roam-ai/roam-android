@@ -243,3 +243,13 @@ Added:
 - Meta data support for setDescription method.
 - Tracking config feature.
 - App service class parameter to setForegroundNotification method.
+
+## 0.0.34
+
+Added:
+
+- Hourly location count feature.
+
+Fixed:
+
+- The Roam SDK installation support for android 13. 
