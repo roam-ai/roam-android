@@ -247,9 +247,21 @@ Added:
 ## 0.0.34
 
 Added:
-
 - Hourly location count feature.
 
 Fixed:
-
 - The Roam SDK installation support for android 13. 
+
+## 0.1.6
+
+Added:
+- Added SDK installation support for android 13.
+
+Fixed:
+- Fixed updateCurrentLocation method, RoamPublish param can be null.
+- Fixed getActiveTrip method, if isLocal is true then get offline trips in response and vice-versa.
+- Fixed getActiveTrip method, trip stops point should be in response.
+- Fixed updateTrip method, isLocal param should not be required to update a trip.
+
+Modified:
+- Removed isTripSynced method (no longer required).
