@@ -265,3 +265,8 @@ Fixed:
 
 Modified:
 - Removed isTripSynced method (no longer required).
+
+## 0.1.7
+
+Fixed:
+- Fixed getCurrentLocation method issue.
