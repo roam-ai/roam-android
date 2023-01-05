@@ -270,3 +270,8 @@ Modified:
 
 Fixed:
 - Fixed getCurrentLocation method issue.
+
+## 0.0.35
+
+Fixed:
+- Fixed deprecated code and time out error for get current location method.
