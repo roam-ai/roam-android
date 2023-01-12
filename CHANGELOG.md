@@ -275,3 +275,8 @@ Fixed:
 
 Fixed:
 - Fixed deprecated code and time out error for get current location method.
+
+## 0.1.8
+
+Fixed:
+- Fixed deprecated code and time out error for get current location method.
