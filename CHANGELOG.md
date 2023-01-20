@@ -280,3 +280,8 @@ Fixed:
 
 Fixed:
 - Fixed deprecated code and time out error for get current location method.
+
+## 0.1.9
+
+Added:
+- Added basic ingest publish topic name for aws cost optimisation.
