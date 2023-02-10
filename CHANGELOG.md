@@ -285,3 +285,8 @@ Fixed:
 
 Added:
 - Added basic ingest publish topic name for aws cost optimisation.
+
+## 0.1.10
+
+Added:
+- Added activity recognition to reduce battery consumption for default tracking modes.
