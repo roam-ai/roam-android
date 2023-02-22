@@ -290,3 +290,8 @@ Added:
 
 Added:
 - Added activity recognition to reduce battery consumption for default tracking modes.
+
+## 0.0.36
+
+Fixed:
+- Fixed multiple callback issue for trip methods.
