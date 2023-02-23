@@ -38,6 +38,16 @@ import com.roam.sdk.callback.RoamLogoutCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamUser;
 import com.roam.sdk.models.createtrip.RoamCreateTrip;
+import com.roam.sdk.trips_v2.RoamTrip;
+import com.roam.sdk.trips_v2.callback.RoamTripCallback;
+import com.roam.sdk.trips_v2.models.Error;
+import com.roam.sdk.trips_v2.models.RoamTripResponse;
+import com.roam.sdk.trips_v2.request.RoamTripStops;
+
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private ProgressBar progressBar;
@@ -83,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ckToggleLocation.setOnCheckedChangeListener(this);
 
         checkPermissions();
-
 
 
     }
@@ -239,14 +248,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void createTrip() {
         show();
-        Roam.createTrip(null, null, ckOffline.isChecked(), null, new RoamCreateTripCallback() {
+
+        //metadata
+        JSONObject metadata = new JSONObject();
+        try {
+            metadata.put("KEY", "VALUE");
+        } catch (Exception e) {
+        }
+
+        List<Double> geometry = new ArrayList<>();
+        geometry.add(85.30614739); //lon
+        geometry.add(23.5155215); //lat
+
+        //stop point
+        RoamTripStops stop = new RoamTripStops();
+        stop.setMetadata(metadata);
+        stop.setStopDescription("STOP-DESCRIPTION");
+        stop.setStopName("STOP-NAME");
+        stop.setAddress("STOP-ADDRESS");
+        stop.setGeometryRadius(600.0);
+        stop.setGeometry(geometry);
+        List<RoamTripStops> stops = new ArrayList<>();
+        stops.add(stop);
+
+        //builder
+        RoamTrip trip = new RoamTrip.Builder()
+                .setUserId(RoamPreferences.getUserId(this, "userId"))
+                .setTripDescription("TRIP-DESCRIPTION")
+                .setTripName("TRIP-NAME")
+                .setIsLocal(ckOffline.isChecked())
+                .setStop(stops)
+                .setMetadata(metadata)
+                .build();
+
+        Roam.createTrip(trip, new RoamTripCallback() {
             @Override
-            public void onSuccess(RoamCreateTrip geoSparkCreateTrip) {
+            public void onSuccess(RoamTripResponse roamTripResponse) {
                 hide();
             }
 
             @Override
-            public void onFailure(RoamError status) {
+            public void onError(Error error) {
                 hide();
             }
         });
@@ -329,20 +371,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
         dialog.setContentView(R.layout.time_tracking_layout);
 
-        TextView tvPassive=dialog.findViewById(R.id.tvPassive);
-        TextView tvActive=dialog.findViewById(R.id.tvActive);
-        TextView tvTime=dialog.findViewById(R.id.tvTime);
-        TextView tvBalanced=dialog.findViewById(R.id.tvBalanced);
-        TextView tvDistance=dialog.findViewById(R.id.tvDistance);
+        TextView tvPassive = dialog.findViewById(R.id.tvPassive);
+        TextView tvActive = dialog.findViewById(R.id.tvActive);
+        TextView tvTime = dialog.findViewById(R.id.tvTime);
+        TextView tvBalanced = dialog.findViewById(R.id.tvBalanced);
+        TextView tvDistance = dialog.findViewById(R.id.tvDistance);
 
-        LinearLayout llTime=dialog.findViewById(R.id.llTime);
-        LinearLayout llDistance=dialog.findViewById(R.id.llDistance);
+        LinearLayout llTime = dialog.findViewById(R.id.llTime);
+        LinearLayout llDistance = dialog.findViewById(R.id.llDistance);
 
-        EditText edtTime=dialog.findViewById(R.id.edtTime);
-        EditText edtDist=dialog.findViewById(R.id.edtDist);
+        EditText edtTime = dialog.findViewById(R.id.edtTime);
+        EditText edtDist = dialog.findViewById(R.id.edtDist);
 
-        TextView tvTimeContinue=dialog.findViewById(R.id.tvTimeContinue);
-        TextView tvDistContinue=dialog.findViewById(R.id.tvDistContinue);
+        TextView tvTimeContinue = dialog.findViewById(R.id.tvTimeContinue);
+        TextView tvDistContinue = dialog.findViewById(R.id.tvDistContinue);
 
         tvActive.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -386,14 +428,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-
         tvTimeContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(edtTime.getText().toString().equalsIgnoreCase(""))
+                if (edtTime.getText().toString().equalsIgnoreCase(""))
                     Toast.makeText(MainActivity.this, "Please enter time interval", Toast.LENGTH_SHORT).show();
-                else
-                {
+                else {
                     RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtTime.getText().toString())) //5
                             .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                             .build();
@@ -408,7 +448,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvDistContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(edtDist.getText().toString().equalsIgnoreCase(""))
+                if (edtDist.getText().toString().equalsIgnoreCase(""))
                     Toast.makeText(MainActivity.this, "Please enter distance interval", Toast.LENGTH_SHORT).show();
                 else {
                     RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtDist.getText().toString()), 60) //100
