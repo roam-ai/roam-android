@@ -45,8 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:23.1.0'
     //implementation 'com.google.android.gms:play-services-location:21.0.1'
     // TODO: Step 1 : Install SDK
-    //implementation 'com.roam.sdk:roam-android:0.0.32'
-    implementation 'com.roam.sdk:roam-android:0.1.10'
+    implementation 'com.roam.sdk:roam-android:0.1.11'
 
 
 }
