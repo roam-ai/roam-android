@@ -301,4 +301,4 @@ Fixed:
 Fixed:
 - Fixed batch location update.
 - Fixed trip sync issue.
-- Fixed multiple update and speed inconsistent issue.
+- Fixed multiple location update and speed inconsistent issue.
