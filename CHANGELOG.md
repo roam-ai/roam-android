@@ -295,3 +295,10 @@ Added:
 
 Fixed:
 - Fixed multiple callback issue for trip methods.
+
+## 0.1.11
+
+Fixed:
+- Fixed batch location update.
+- Fixed trip sync issue.
+- Fixed multiple update and speed inconsistent issue.
