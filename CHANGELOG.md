@@ -302,3 +302,12 @@ Fixed:
 - Fixed batch location update.
 - Fixed trip sync issue.
 - Fixed multiple location update and speed inconsistent issue.
+
+## 0.1.12
+
+Fixed:
+- Fixed dynamic distance filter logic.
+- Fixed location update gap in time base tracking.
+
+Added:
+- Added noise filter in time base tracking.
