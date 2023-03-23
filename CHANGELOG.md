@@ -311,3 +311,8 @@ Fixed:
 
 Added:
 - Added noise filter in time base tracking.
+
+## 0.1.13
+
+Fixed:
+- Changed work manager dependency version for react native SDK support.
