@@ -316,3 +316,11 @@ Added:
 
 Fixed:
 - Changed work manager dependency version for react native SDK support.
+
+## 0.1.14
+
+Added:
+- Added post notification support for android 13.
+
+Fixed:
+- Removed work manager concept from sdk.
