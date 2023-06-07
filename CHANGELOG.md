@@ -324,3 +324,9 @@ Added:
 
 Fixed:
 - Removed work manager concept from sdk.
+
+## 0.1.15
+
+Fixed:
+- Fixed noise and duplicate locations update.
+- Improved location accuracy.
