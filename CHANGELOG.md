@@ -330,3 +330,8 @@ Fixed:
 Fixed:
 - Fixed noise and duplicate locations update.
 - Improved location accuracy.
+
+## 0.1.16
+
+Added:
+- Added stationary duration for all tracking modes except time base.
