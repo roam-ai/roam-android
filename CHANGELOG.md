@@ -335,3 +335,15 @@ Fixed:
 
 Added:
 - Added stationary duration for all tracking modes except time base.
+
+## 0.1.17
+
+Added:
+- Added a new feature to get PK from local.properties gradle file.
+
+Fixed: 
+- Fixed order of callbacks for create and get user methods and MQTT connection.
+
+
+
+
