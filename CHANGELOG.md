@@ -346,7 +346,9 @@ Fixed:
 
 ## 0.1.18
 
-Added:
-- Added new security module in Roam SDK.
+We're pleased to unveil Roam Android SDK version 0.1.18, showcasing an exciting new feature that enhances security and user control. Here's an overview of the latest updates:
+- New Security Module: Roam  
+In this release, we introduce the Roam Security Module, a powerful addition to the SDK's arsenal. With the Roam module, developers now have access to the toggleSecurity() method, a versatile tool that allows the seamless activation and deactivation of advanced security mechanisms. Prioritizing data security is vital, and the Roam Security Module empowers developers to safeguard sensitive information more effectively.
+Your feedback and insights have been instrumental in shaping the Roam Android SDK, and we're grateful for your ongoing support. If you have any questions, suggestions, or need assistance, please don't hesitate to contact our support team. As we strive to continually refine and enhance the SDK, look forward to more updates on the horizon.
 
 
