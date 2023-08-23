@@ -344,6 +344,9 @@ Added:
 Fixed: 
 - Fixed order of callbacks for create and get user methods and MQTT connection.
 
+## 0.1.18
 
+Added:
+- Added new security module in Roam SDK.
 
 
