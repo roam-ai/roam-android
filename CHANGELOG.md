@@ -351,4 +351,11 @@ We're pleased to unveil Roam Android SDK version 0.1.18, showcasing an exciting 
 In this release, we introduce the Roam Security Module, a powerful addition to the SDK's arsenal. With the Roam module, developers now have access to the toggleSecurity() method, a versatile tool that allows the seamless activation and deactivation of advanced security mechanisms. Prioritizing data security is vital, and the Roam Security Module empowers developers to safeguard sensitive information more effectively.
 Your feedback and insights have been instrumental in shaping the Roam Android SDK, and we're grateful for your ongoing support. If you have any questions, suggestions, or need assistance, please don't hesitate to contact our support team. As we strive to continually refine and enhance the SDK, look forward to more updates on the horizon.
 
+## 0.1.19
+
+We're excited to announce the latest release of the Roam Android SDK, version 0.1.19. This update brings a significant enhancement that contributes to heightened security and user control. Read on to discover the key highlights of this release:
+- New Feature: Motion Detection Security
+With Roam Android SDK v0.1.19, we introduce an innovative security feature—Motion Detection. This cutting-edge capability adds an extra layer of protection to your application's tracking experience. By enabling the verifyMotion parameter in the toggleSecurity() method, developers can now leverage motion patterns to enhance security. This empowers you to monitor and respond to unusual motion activities, ensuring a safer and more reliable tracking environment.
+Your feedback and insights have been instrumental in shaping the Roam Android SDK, and we're grateful for your ongoing support. If you have any questions, suggestions, or need assistance, please don't hesitate to contact our support team. As we strive to continually refine and enhance the SDK, look forward to more updates on the horizon.
+
 
