@@ -7,6 +7,7 @@ public class RoamPreferences {
 
     private static final String signIn = "signIn";
     private static final String userId = "userId";
+    private static final String selfLogin = "selfLogin";
 
     private static SharedPreferences getInstance(Context context) {
         return context.getSharedPreferences("roam", Context.MODE_PRIVATE);
@@ -47,5 +48,13 @@ public class RoamPreferences {
 
     public static boolean isSignedIn(Context context) {
         return getBoolean(context, signIn);
+    }
+
+    public static void setSelfLogin(Context context, boolean value) {
+        setBoolean(context, selfLogin, value);
+    }
+
+    public static boolean isSelfLoggedIn(Context context) {
+        return getBoolean(context, selfLogin);
     }
 }

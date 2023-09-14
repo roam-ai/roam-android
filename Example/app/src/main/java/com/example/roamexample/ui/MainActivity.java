@@ -1,12 +1,7 @@
 package com.example.roamexample.ui;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -25,7 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.roamexample.R;
-import com.example.roamexample.service.ForegroundService;
+import com.example.roamexample.service.ImplicitService;
 import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
@@ -33,11 +28,9 @@ import com.roam.sdk.Roam;
 import com.roam.sdk.RoamPublish;
 import com.roam.sdk.RoamTrackingMode;
 import com.roam.sdk.callback.RoamCallback;
-import com.roam.sdk.callback.RoamCreateTripCallback;
 import com.roam.sdk.callback.RoamLogoutCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamUser;
-import com.roam.sdk.models.createtrip.RoamCreateTrip;
 import com.roam.sdk.trips_v2.RoamTrip;
 import com.roam.sdk.trips_v2.callback.RoamTripCallback;
 import com.roam.sdk.trips_v2.models.Error;
@@ -296,13 +289,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void trackingStatus() {
         if (Roam.isLocationTracking()) {
-            startService(new Intent(this, ForegroundService.class));
+            startService(new Intent(this, ImplicitService.class));
             btnStartTracking.setBackground(getResources().getDrawable(R.drawable.bg_button_disable));
             btnStopTracking.setBackground(getResources().getDrawable(R.drawable.bg_button_enable));
             btnStartTracking.setEnabled(false);
             btnStopTracking.setEnabled(true);
         } else {
-            stopService(new Intent(this, ForegroundService.class));
+            stopService(new Intent(this, ImplicitService.class));
             btnStartTracking.setBackground(getResources().getDrawable(R.drawable.bg_button_enable));
             btnStopTracking.setBackground(getResources().getDrawable(R.drawable.bg_button_disable));
             btnStartTracking.setEnabled(true);

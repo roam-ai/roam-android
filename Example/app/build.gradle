@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.roamexample"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -45,7 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:23.1.0'
     //implementation 'com.google.android.gms:play-services-location:21.0.1'
     // TODO: Step 1 : Install SDK
-    implementation 'com.roam.sdk:roam-android:0.1.11'
+    implementation 'com.roam.sdk:roam-android:0.1.19'
 
 
 }

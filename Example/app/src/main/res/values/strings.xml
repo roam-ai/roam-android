@@ -27,4 +27,7 @@
     <string name="events_listener">Events Listener</string>
     <string name="location_listener">Location Listener</string>
     <string name="subscribe_location">Subscribe location</string>
+    <string name="update_interval">Update interval</string>
+    <string name="distance_filter">Enter distance filter</string>
+    <string name="enter_geofenceradius">Enter top duration</string>
 </resources>
