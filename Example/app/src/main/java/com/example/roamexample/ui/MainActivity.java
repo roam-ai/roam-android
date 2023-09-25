@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioGroup mRadioGroup;
     private EditText edtAccuracyFilter, edtTime, edtDist;
     private TextView snackBar;
-    private CheckBox ckOffline, ckFilter, ckMock, ckToggleEvents, ckToggleLocation;
-    private Button btnStartTracking, btnStopTracking, btnCustomAccuracyEnable;
+    private CheckBox ckOffline, ckFilter, ckMock, ckToggleEvents, ckToggleLocation, ckNetwork, ckRooted, ckSource, ckMotion;
+    private Button btnStartTracking, btnStopTracking, btnCustomAccuracyEnable, btnToggleSecurity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +85,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ckToggleEvents.setOnCheckedChangeListener(this);
         ckToggleLocation.setOnCheckedChangeListener(this);
 
+        btnToggleSecurity = findViewById(R.id.btnToggleSecurity);
+        ckMotion = findViewById(R.id.ckVerifyMotion);
+        ckNetwork = findViewById(R.id.ckNetwork);
+        ckRooted = findViewById(R.id.ckRooted);
+        ckSource = findViewById(R.id.ckVerifySource);
+
+        btnToggleSecurity.setOnClickListener(this);
+
         checkPermissions();
 
 
@@ -115,6 +123,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     showMsg("Enter accuracy");
                 }
+                break;
+            case R.id.btnToggleSecurity:
+                toggleSecurity();
                 break;
         }
     }
@@ -169,7 +180,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Roam.requestLocationPermission(this);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !Roam.checkBackgroundLocationPermission()) {
             Roam.requestBackgroundLocationPermission(this);
-        } else {
+        } else if(!Roam.checkPhoneStatePermission()){
+            Roam.requestPhoneStatePermission(this);
+        } else if(!Roam.checkActivityPermission()){
+            Roam.requestActivityPermission(this);
+        }else {
             callBottomDialoge();
         }
 
@@ -237,6 +252,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void stopTracking() {
         Roam.stopTracking();
         trackingStatus();
+    }
+
+    private void toggleSecurity(){
+        Roam.toggleSecurity(
+                ckNetwork.isChecked(),
+                ckRooted.isChecked(),
+                ckSource.isChecked(),
+                ckMotion.isChecked()
+                );
     }
 
     private void createTrip() {

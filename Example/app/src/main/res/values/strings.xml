@@ -21,6 +21,8 @@
     <string name="logout">Logout</string>
     <string name="custom_accuracy">Custom Accuracy Engine</string>
     <string name="default_accuracy">Default Accuracy Engine</string>
+    <string name="security_module">Security Module</string>
+    <string name="toggleSecurity">Toggle Security</string>
 
     <string name="listener">Subscribe</string>
     <string name="subscribe_events">Subscribe Events</string>
