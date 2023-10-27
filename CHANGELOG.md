@@ -366,3 +366,10 @@ New Callbacks for Enhanced Control: With added success and error callbacks to me
 Extended Security Checks: We've expanded the toggleSecurity() method with two vital parameters. Now, you can check for connected external accessories and Bluetooth status, bolstering security measures for your application.
 Your feedback has played a pivotal role in shaping these enhancements. Should you have any questions, encounter issues, or want to share your experiences, our dedicated support team is here to assist you.
 
+## 0.1.21
+
+We're thrilled to present Roam Android SDK version 0.1.21, focusing on bolstering our security module. In this update, we've made significant improvements to enhance the security of location data. Here's what's new:
+- Efficient Spoofed Location Detection: Our security algorithm has been refined to efficiently discard spoofed locations during the initial location fix. This enhancement ensures that only genuine and accurate location data is captured, enhancing the authenticity of the information gathered.
+- Addressing False Negatives: We've tackled false negatives during location tracking, ensuring that true locations are not mistakenly identified as spoofed locations. This refinement enhances the precision of location tracking, providing you with reliable and accurate data.
+
+These security enhancements are designed to safeguard your data and ensure the integrity of the location information collected by the Roam Android SDK. Your security is our priority, and we're committed to providing you with a secure and trustworthy experience. If you have any questions, concerns, or feedback, our support team is always here to assist you.
