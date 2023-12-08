@@ -373,3 +373,10 @@ We're thrilled to present Roam Android SDK version 0.1.21, focusing on bolsterin
 - Addressing False Negatives: We've tackled false negatives during location tracking, ensuring that true locations are not mistakenly identified as spoofed locations. This refinement enhances the precision of location tracking, providing you with reliable and accurate data.
 
 These security enhancements are designed to safeguard your data and ensure the integrity of the location information collected by the Roam Android SDK. Your security is our priority, and we're committed to providing you with a secure and trustworthy experience. If you have any questions, concerns, or feedback, our support team is always here to assist you.
+
+## 0.1.22
+
+We're excited to introduce Roam Android SDK version 0.1.22, focusing on refining our location filters to improve accuracy during location tracking. In this update, we've made the following improvement:
+- **Enhanced Location Filtering:** We've refined our location filters to effectively discard drifts and noises during location tracking. This enhancement aims to improve the accuracy and reliability of location data, ensuring a more precise representation of user movement.
+
+These improvements are geared towards providing a more accurate and dependable location tracking experience for developers and users. We're dedicated to enhancing your tracking capabilities and ensuring a smoother operational experience. Should you have any inquiries or feedback, our support team is readily available to assist you.
