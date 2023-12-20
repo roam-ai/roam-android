@@ -380,3 +380,10 @@ We're excited to introduce Roam Android SDK version 0.1.22, focusing on refining
 - **Enhanced Location Filtering:** We've refined our location filters to effectively discard drifts and noises during location tracking. This enhancement aims to improve the accuracy and reliability of location data, ensuring a more precise representation of user movement.
 
 These improvements are geared towards providing a more accurate and dependable location tracking experience for developers and users. We're dedicated to enhancing your tracking capabilities and ensuring a smoother operational experience. Should you have any inquiries or feedback, our support team is readily available to assist you.
+
+## 0.1.23
+
+We're excited to introduce Roam Android SDK version 0.1.23, focusing on refining our location filters to improve accuracy during location tracking. In this update, we've made the following improvement:
+- **Enhanced Location Filtering:** We've refined our location filters to effectively discard drifts and noises during location tracking. This enhancement aims to improve the accuracy and reliability of location data, ensuring a more precise representation of user movement.
+
+These improvements are geared towards providing a more accurate and dependable location tracking experience for developers and users. We're dedicated to enhancing your tracking capabilities and ensuring a smoother operational experience. Should you have any inquiries or feedback, our support team is readily available to assist you.
