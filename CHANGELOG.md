@@ -387,3 +387,10 @@ We're excited to introduce Roam Android SDK version 0.1.23, focusing on refining
 - **Enhanced Location Filtering:** We've refined our location filters to effectively discard drifts and noises during location tracking. This enhancement aims to improve the accuracy and reliability of location data, ensuring a more precise representation of user movement.
 
 These improvements are geared towards providing a more accurate and dependable location tracking experience for developers and users. We're dedicated to enhancing your tracking capabilities and ensuring a smoother operational experience. Should you have any inquiries or feedback, our support team is readily available to assist you.
+
+## 0.1.24
+
+We're excited to introduce Roam Android SDK version 0.1.24, featuring the addition of a new feature called Custom MQTT Connector. This update enables developers to register custom MQTT endpoints to forward location updates directly from the SDK to the configured MQTT broker. Here's what's new:
+- **Custom MQTT Connector:** Developers now have the capability to register custom MQTT endpoints, allowing seamless forwarding of location updates from the SDK to the specified MQTT broker. This feature provides greater flexibility and customization options for integrating location data into your applications.
+
+These enhancements expand the capabilities of the Roam Android SDK, empowering developers with more control over how location updates are managed and transmitted. We're committed to providing a versatile and robust SDK experience. For any inquiries or feedback regarding this new feature, our support team is here to assist you.
