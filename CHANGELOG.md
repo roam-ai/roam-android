@@ -394,3 +394,10 @@ We're excited to introduce Roam Android SDK version 0.1.24, featuring the additi
 - **Custom MQTT Connector:** Developers now have the capability to register custom MQTT endpoints, allowing seamless forwarding of location updates from the SDK to the specified MQTT broker. This feature provides greater flexibility and customization options for integrating location data into your applications.
 
 These enhancements expand the capabilities of the Roam Android SDK, empowering developers with more control over how location updates are managed and transmitted. We're committed to providing a versatile and robust SDK experience. For any inquiries or feedback regarding this new feature, our support team is here to assist you.
+
+## 0.1.25
+
+We're excited to introduce Roam Android SDK version 0.1.25, featuring an enhancement to support `Roam.updateLocationWhenStationary()` alongside Activity Recognition-based stationary detection. This update provides developers with more control over location updates when stationary. Here's what's new:
+- **Support for Roam.updateLocationWhenStationary():** Developers can now utilize `Roam.updateLocationWhenStationary()` in conjunction with Activity Recognition-based stationary detection. This enhancement allows for more precise management of location updates, particularly in stationary scenarios, enhancing the overall accuracy of location tracking.
+
+We're committed to continually improving the Roam Android SDK to provide developers with powerful tools for location tracking. If you have any questions or feedback regarding this enhancement, our support team is available to assist you.
