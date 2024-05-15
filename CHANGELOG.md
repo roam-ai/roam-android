@@ -401,3 +401,10 @@ We're excited to introduce Roam Android SDK version 0.1.25, featuring an enhance
 - **Support for Roam.updateLocationWhenStationary():** Developers can now utilize `Roam.updateLocationWhenStationary()` in conjunction with Activity Recognition-based stationary detection. This enhancement allows for more precise management of location updates, particularly in stationary scenarios, enhancing the overall accuracy of location tracking.
 
 We're committed to continually improving the Roam Android SDK to provide developers with powerful tools for location tracking. If you have any questions or feedback regarding this enhancement, our support team is available to assist you.
+
+## 0.1.26
+
+We're thrilled to present Roam Android SDK version 0.1.26, focusing on expanding compatibility with the latest Android development environment. In this update, we've added support for Android SDK 34. Here's what's new:
+- **Support for Android SDK 34:** The Roam Android SDK now fully supports Android SDK 34. Developers can leverage the latest features and improvements offered by the newest Android platform, ensuring optimal performance and compatibility.
+
+We're committed to providing developers with cutting-edge tools and resources to streamline their development process. If you have any questions, concerns, or feedback, our support team is always here to assist you.
