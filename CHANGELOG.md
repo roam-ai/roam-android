@@ -408,3 +408,10 @@ We're thrilled to present Roam Android SDK version 0.1.26, focusing on expanding
 - **Support for Android SDK 34:** The Roam Android SDK now fully supports Android SDK 34. Developers can leverage the latest features and improvements offered by the newest Android platform, ensuring optimal performance and compatibility.
 
 We're committed to providing developers with cutting-edge tools and resources to streamline their development process. If you have any questions, concerns, or feedback, our support team is always here to assist you.
+
+## 0.1.27
+
+We're thrilled to present Roam Android SDK version 0.1.27, addressing a specific issue with the `Roam.updateLocationWhenStationary()` method on certain devices running Android 14. In this update, we've made the following fix:
+- **Fix for `Roam.updateLocationWhenStationary()` on Android 14:** We've resolved an issue where the `updateLocationWhenStationary()` method was not functioning correctly on some devices running Android 14. This fix ensures reliable performance and accurate location updates on all affected devices.
+
+We're committed to providing you with a seamless and robust SDK experience. If you have any questions, concerns, or feedback, our support team is always here to assist you.
