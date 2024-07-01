@@ -415,3 +415,14 @@ We're thrilled to present Roam Android SDK version 0.1.27, addressing a specific
 - **Fix for `Roam.updateLocationWhenStationary()` on Android 14:** We've resolved an issue where the `updateLocationWhenStationary()` method was not functioning correctly on some devices running Android 14. This fix ensures reliable performance and accurate location updates on all affected devices.
 
 We're committed to providing you with a seamless and robust SDK experience. If you have any questions, concerns, or feedback, our support team is always here to assist you.
+
+## 0.1.28
+
+We're thrilled to present Roam Android SDK version 0.1.28, featuring the addition of two new modules to enhance your location tracking capabilities. In this update, we've introduced the following modules:
+
+**roam-mqtt-connector:** This module enables custom MQTT connections, allowing developers to register custom MQTT endpoints for forwarding location updates directly from the SDK to the configured MQTT broker.
+
+**roam-batch-connector:** This module allows for publishing location data in batches instead of in real-time using the pub/sub model. This enhancement provides flexibility in managing location data transmission and can help optimize performance and data usage.
+
+
+These new modules are designed to provide greater flexibility and control over location data handling in your applications. We're committed to continually improving the Roam Android SDK to meet your evolving needs. If you have any questions, concerns, or feedback, our support team is always here to assist you.
