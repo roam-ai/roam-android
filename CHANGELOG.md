@@ -426,3 +426,12 @@ We're thrilled to present Roam Android SDK version 0.1.28, featuring the additio
 
 
 These new modules are designed to provide greater flexibility and control over location data handling in your applications. We're committed to continually improving the Roam Android SDK to meet your evolving needs. If you have any questions, concerns, or feedback, our support team is always here to assist you.
+
+## 0.1.29
+
+We're thrilled to present Roam Android SDK version 0.1.29, focusing on expanding compatibility and strengthening security. In this update, we've made the following improvements:
+- **Support for Android 14:** We've added full support for Android 14, ensuring seamless functionality on the latest Android version.
+- **Security Enhancements to Broadcast Receivers:** We've implemented security changes to our broadcast receivers, enhancing the overall security and integrity of your application.
+
+
+These updates are designed to provide a more secure and compatible experience for developers and users alike. We're dedicated to continually improving the Roam Android SDK to meet your needs. Should you have any inquiries or feedback, our support team is always here to assist you.
