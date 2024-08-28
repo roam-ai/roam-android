@@ -435,3 +435,10 @@ We're thrilled to present Roam Android SDK version 0.1.29, focusing on expanding
 
 
 These updates are designed to provide a more secure and compatible experience for developers and users alike. We're dedicated to continually improving the Roam Android SDK to meet your needs. Should you have any inquiries or feedback, our support team is always here to assist you.
+
+## 0.1.30
+
+We're pleased to announce the release of Roam Android SDK version 0.1.30, focusing on enhancing the stability and functionality of the MQTT logging system. In this update, we've made the following improvement:
+- **MQTT Logger Method Fix:** We've fixed an issue with the MQTT logger method, ensuring more reliable and accurate logging of MQTT-related activities.
+
+This update is part of our ongoing commitment to improving the Roam Android SDK. If you have any questions or feedback, our support team is always here to assist you.
