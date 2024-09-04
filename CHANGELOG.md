@@ -442,3 +442,12 @@ We're pleased to announce the release of Roam Android SDK version 0.1.30, focusi
 - **MQTT Logger Method Fix:** We've fixed an issue with the MQTT logger method, ensuring more reliable and accurate logging of MQTT-related activities.
 
 This update is part of our ongoing commitment to improving the Roam Android SDK. If you have any questions or feedback, our support team is always here to assist you.
+
+
+## 0.1.31
+
+We're pleased to introduce Roam Android SDK version 0.1.31, focusing on ensuring compatibility with the latest Android devices. In this update, we've made the following enhancement:
+- **Google API Updates for MQTT Module:** We've updated the Google APIs within our MQTT module to fully support devices running Android 14, ensuring seamless functionality and compatibility.
+
+
+This update is part of our ongoing effort to keep the Roam Android SDK aligned with the latest technological advancements. If you have any questions or need further assistance, our support team is ready to help.
