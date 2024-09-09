@@ -40,7 +40,7 @@ public class ImplicitService extends Service {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.roam.android.RECEIVED");
         intentFilter.addAction("com.roam.android.NETWORK");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             registerReceiver(mLocationReceiver, intentFilter, RECEIVER_EXPORTED);
         }else{
             registerReceiver(mLocationReceiver, intentFilter);
