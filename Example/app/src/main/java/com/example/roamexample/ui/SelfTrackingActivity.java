@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,7 +21,10 @@ import com.example.roamexample.R;
 import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.snackbar.Snackbar;
 import com.roam.sdk.Roam;
-import com.roam.sdk.RoamTrackingMode;
+import com.roam.sdk.builder.RoamTrackingMode;
+import com.roam.sdk.callback.TrackingCallback;
+import com.roam.sdk.models.RoamError;
+
 
 public class SelfTrackingActivity extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener{
     private TextView snackBar;
@@ -141,15 +145,45 @@ public class SelfTrackingActivity extends AppCompatActivity implements View.OnCl
     private void startTracking() {
         int selectedId = mRadioGroup.getCheckedRadioButtonId();
         if (selectedId == R.id.rbOption1) {
-            Roam.startTracking(RoamTrackingMode.ACTIVE);
+            Roam.startTracking(RoamTrackingMode.ACTIVE, new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingMode = RoamTrackingMode.ACTIVE;
             trackingStatus();
         } else if (selectedId == R.id.rbOption2) {
-            Roam.startTracking(RoamTrackingMode.BALANCED);
+            Roam.startTracking(RoamTrackingMode.BALANCED, new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingMode = RoamTrackingMode.BALANCED;
             trackingStatus();
         } else if (selectedId == R.id.rbOption3) {
-            Roam.startTracking(RoamTrackingMode.PASSIVE);
+            Roam.startTracking(RoamTrackingMode.PASSIVE, new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingMode = RoamTrackingMode.PASSIVE;
             trackingStatus();
         } else if (selectedId == R.id.rbOption4) {
@@ -175,13 +209,33 @@ public class SelfTrackingActivity extends AppCompatActivity implements View.OnCl
                 RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(updateInterval)
                         .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                         .build();
-                Roam.startTracking(roamTrackingMode);
+                Roam.startTracking(roamTrackingMode, new TrackingCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+                        Log.d("TAG", "Tracking started" );
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+                        Log.d("TAG", "Tracking not started" );
+                    }
+                });
                 trackingMode = roamTrackingMode;
             } else {
                 RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(distanceFilter, stopDuration)
                         .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                         .build();
-                Roam.startTracking(roamTrackingMode);
+                Roam.startTracking(roamTrackingMode,new TrackingCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+                        Log.d("TAG", "Tracking started" );
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+                        Log.d("TAG", "Tracking not started" );
+                    }
+                });
                 trackingMode = roamTrackingMode;
             }
             trackingStatus();
@@ -191,7 +245,17 @@ public class SelfTrackingActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void stopTracking() {
-        Roam.stopTracking();
+        Roam.stopTracking(new TrackingCallback() {
+            @Override
+            public void onSuccess(String s) {
+                Log.d("TAG", "Tracking stopped");
+            }
+
+            @Override
+            public void onError(RoamError roamError) {
+                Log.d("TAG", "Tracking not stopped");
+            }
+        });
         trackingStatus();
     }
 

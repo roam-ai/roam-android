@@ -12,10 +12,11 @@ import android.widget.TextView;
 
 import com.example.roamexample.R;
 import com.example.roamexample.storage.RoamPreferences;
-import com.google.android.material.snackbar.Snackbar;
 import com.roam.sdk.Roam;
-import com.roam.sdk.RoamPublish;
+import com.roam.sdk.builder.RoamPublish;
+import com.roam.sdk.callback.PublishCallback;
 import com.roam.sdk.callback.RoamCallback;
+import com.roam.sdk.callback.SubscribeCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamUser;
 
@@ -82,19 +83,69 @@ public class ToggleActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.swSubscribeLoc:
                 if (swSubscribeLoc.isChecked()) {
-                    Roam.subscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
+                    Roam.subscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(ToggleActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 } else {
-                    Roam.unSubscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
+                    Roam.unSubscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(ToggleActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 }
                 break;
             case R.id.swSubscribeEvents:
                 if (swSubscribeEvents.isChecked()) {
                     RoamPublish geoSparkPublish = new RoamPublish.Builder()
                             .build();
-                    Roam.publishAndSave(geoSparkPublish);
-                    Roam.subscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
+                    Roam.publishAndSave(geoSparkPublish, new PublishCallback() {
+                        @Override
+                        public void onSuccess(String s) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
+                    Roam.subscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 } else {
-                    Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"));
+                    Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(ToggleActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 }
                 break;
 

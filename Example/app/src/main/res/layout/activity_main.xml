@@ -349,6 +349,24 @@
                 android:layout_weight="1"
                 android:text="Verify Motion" />
 
+            --
+
+            <CheckBox
+                android:id="@+id/ckBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Bluetooth" />
+
+            <CheckBox
+                android:id="@+id/ckAccessories"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="External accessories" />
+
+
+
             <Button
                 android:id="@+id/btnToggleSecurity"
                 android:layout_width="match_parent"
@@ -380,6 +398,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="Offline" />
+
 
             <Button
                 android:id="@+id/btnCreateTrip"

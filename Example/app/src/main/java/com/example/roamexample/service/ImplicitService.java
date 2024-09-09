@@ -3,6 +3,7 @@ package com.example.roamexample.service;
 import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.IBinder;
 
 
@@ -39,7 +40,11 @@ public class ImplicitService extends Service {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.roam.android.RECEIVED");
         intentFilter.addAction("com.roam.android.NETWORK");
-        registerReceiver(mLocationReceiver, intentFilter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            registerReceiver(mLocationReceiver, intentFilter, RECEIVER_EXPORTED);
+        }else{
+            registerReceiver(mLocationReceiver, intentFilter);
+        }
 
     }
 

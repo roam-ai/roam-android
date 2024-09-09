@@ -25,10 +25,13 @@ import com.example.roamexample.storage.RoamPreferences;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
 import com.roam.sdk.Roam;
-import com.roam.sdk.RoamPublish;
-import com.roam.sdk.RoamTrackingMode;
+import com.roam.sdk.builder.RoamPublish;
+import com.roam.sdk.builder.RoamTrackingMode;
+import com.roam.sdk.callback.PublishCallback;
 import com.roam.sdk.callback.RoamCallback;
 import com.roam.sdk.callback.RoamLogoutCallback;
+import com.roam.sdk.callback.SubscribeCallback;
+import com.roam.sdk.callback.TrackingCallback;
 import com.roam.sdk.models.RoamError;
 import com.roam.sdk.models.RoamUser;
 import com.roam.sdk.trips_v2.RoamTrip;
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RadioGroup mRadioGroup;
     private EditText edtAccuracyFilter, edtTime, edtDist;
     private TextView snackBar;
-    private CheckBox ckOffline, ckFilter, ckMock, ckToggleEvents, ckToggleLocation, ckNetwork, ckRooted, ckSource, ckMotion;
+    private CheckBox ckOffline, ckFilter, ckMock, ckToggleEvents, ckToggleLocation, ckNetwork, ckRooted, ckSource, ckMotion, ckBluetooth, ckAccessories;
     private Button btnStartTracking, btnStopTracking, btnCustomAccuracyEnable, btnToggleSecurity;
 
     @Override
@@ -90,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ckNetwork = findViewById(R.id.ckNetwork);
         ckRooted = findViewById(R.id.ckRooted);
         ckSource = findViewById(R.id.ckVerifySource);
+        ckBluetooth = findViewById(R.id.ckBluetooth);
+        ckAccessories = findViewById(R.id.ckAccessories);
 
         btnToggleSecurity.setOnClickListener(this);
 
@@ -153,9 +158,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ckToggleLocation:
                 if (isChecked) {
                     // TODO: Step 6 : Subscribe to your userId to listen location updated from LocationReceiver.java
-                    Roam.subscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(MainActivity.this, "userId"));
+                    Roam.subscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(MainActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 } else {
-                    Roam.unSubscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(MainActivity.this, "userId"));
+                    Roam.unSubscribe(Roam.Subscribe.LOCATION, RoamPreferences.getUserId(MainActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 }
                 break;
 
@@ -164,9 +189,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // TODO: Step 7 : Publish and save location in Roam Backend.
                     RoamPublish geoSparkPublish = new RoamPublish.Builder()
                             .build();
-                    Roam.publishAndSave(geoSparkPublish);
+                    Roam.publishAndSave(geoSparkPublish, new PublishCallback() {
+                        @Override
+                        public void onSuccess(String s) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 } else {
-                    Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(MainActivity.this, "userId"));
+                    Roam.unSubscribe(Roam.Subscribe.EVENTS, RoamPreferences.getUserId(MainActivity.this, "userId"), new SubscribeCallback() {
+                        @Override
+                        public void onSuccess(String s, String s1) {
+
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+
+                        }
+                    });
                 }
                 break;
         }
@@ -180,9 +225,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Roam.requestLocationPermission(this);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !Roam.checkBackgroundLocationPermission()) {
             Roam.requestBackgroundLocationPermission(this);
-        } else if(!Roam.checkPhoneStatePermission()){
-            Roam.requestPhoneStatePermission(this);
-        } else if(!Roam.checkActivityPermission()){
+        }
+//        else if(!Roam.checkPhoneStatePermission()){
+//            Roam.requestPhoneStatePermission(this);
+//        }
+        else if(!Roam.checkActivityPermission()){
             Roam.requestActivityPermission(this);
         }else {
             callBottomDialoge();
@@ -206,25 +253,75 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (selectedId == R.id.rbOption5 && edtDist.getText().toString().equalsIgnoreCase(""))
             showMsg("Enter distance interval");
         else if (selectedId == R.id.rbOption1) {
-            Roam.startTracking(RoamTrackingMode.ACTIVE);
+            Roam.startTracking(RoamTrackingMode.ACTIVE,new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingStatus();
         } else if (selectedId == R.id.rbOption2) {
-            Roam.startTracking(RoamTrackingMode.BALANCED);
+            Roam.startTracking(RoamTrackingMode.BALANCED,new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingStatus();
         } else if (selectedId == R.id.rbOption3) {
-            Roam.startTracking(RoamTrackingMode.PASSIVE);
+            Roam.startTracking(RoamTrackingMode.PASSIVE,new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingStatus();
         } else if (selectedId == R.id.rbOption4) {
             RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtTime.getText().toString())) //5
                     .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                     .build();
-            Roam.startTracking(roamTrackingMode);
+            Roam.startTracking(roamTrackingMode,new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingStatus();
         } else if (selectedId == R.id.rbOption5) {
             RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtTime.getText().toString()), 60) //100
                     .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                     .build();
-            Roam.startTracking(roamTrackingMode);
+            Roam.startTracking(roamTrackingMode,new TrackingCallback() {
+                @Override
+                public void onSuccess(String s) {
+                    Log.d("TAG", "Tracking started" );
+                }
+
+                @Override
+                public void onError(RoamError roamError) {
+                    Log.d("TAG", "Tracking not started" );
+                }
+            });
             trackingStatus();
         } else {
             Toast.makeText(this, "Select tracking options", Toast.LENGTH_SHORT).show();
@@ -235,10 +332,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Roam.toggleListener(true, true, new RoamCallback() {
             @Override
             public void onSuccess(RoamUser roamUser) {
-                Roam.subscribe(Roam.Subscribe.LOCATION, roamUser.getUserId());
+                Roam.subscribe(Roam.Subscribe.LOCATION, roamUser.getUserId(), new SubscribeCallback() {
+                    @Override
+                    public void onSuccess(String s, String s1) {
+
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+
+                    }
+                });
                 RoamPublish geoSparkPublish = new RoamPublish.Builder()
                         .build();
-                Roam.publishAndSave(geoSparkPublish);
+                Roam.publishAndSave(geoSparkPublish, new PublishCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+
+                    }
+                });
             }
 
             @Override
@@ -250,7 +367,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // TODO: Step 10 : Stop tracking
     private void stopTracking() {
-        Roam.stopTracking();
+        Roam.stopTracking(new TrackingCallback() {
+            @Override
+            public void onSuccess(String s) {
+                Log.d("TAG", "Tracking stopped");
+            }
+
+            @Override
+            public void onError(RoamError roamError) {
+                Log.d("TAG", "Tracking not stopped");
+            }
+        });
         trackingStatus();
     }
 
@@ -259,7 +386,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ckNetwork.isChecked(),
                 ckRooted.isChecked(),
                 ckSource.isChecked(),
-                ckMotion.isChecked()
+                ckMotion.isChecked(),
+                ckBluetooth.isChecked(),
+                ckAccessories.isChecked()
                 );
     }
 
@@ -406,7 +535,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvActive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Roam.startTracking(RoamTrackingMode.ACTIVE);
+                Roam.startTracking(RoamTrackingMode.ACTIVE,new TrackingCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+                        Log.d("TAG", "Tracking started" );
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+                        Log.d("TAG", "Tracking not started" );
+                    }
+                });
                 trackingStatus();
                 dialog.cancel();
             }
@@ -415,7 +554,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvPassive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Roam.startTracking(RoamTrackingMode.PASSIVE);
+                Roam.startTracking(RoamTrackingMode.PASSIVE,new TrackingCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+                        Log.d("TAG", "Tracking started" );
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+                        Log.d("TAG", "Tracking not started" );
+                    }
+                });
                 trackingStatus();
                 dialog.cancel();
             }
@@ -424,7 +573,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvBalanced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Roam.startTracking(RoamTrackingMode.BALANCED);
+                Roam.startTracking(RoamTrackingMode.BALANCED,new TrackingCallback() {
+                    @Override
+                    public void onSuccess(String s) {
+                        Log.d("TAG", "Tracking started" );
+                    }
+
+                    @Override
+                    public void onError(RoamError roamError) {
+                        Log.d("TAG", "Tracking not started" );
+                    }
+                });
                 trackingStatus();
                 dialog.cancel();
             }
@@ -454,7 +613,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtTime.getText().toString())) //5
                             .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                             .build();
-                    Roam.startTracking(roamTrackingMode);
+                    Roam.startTracking(roamTrackingMode,new TrackingCallback() {
+                        @Override
+                        public void onSuccess(String s) {
+                            Log.d("TAG", "Tracking started" );
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+                            Log.d("TAG", "Tracking not started" );
+                        }
+                    });
                     trackingStatus();
                     dialog.cancel();
                 }
@@ -471,7 +640,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     RoamTrackingMode roamTrackingMode = new RoamTrackingMode.Builder(Integer.parseInt(edtDist.getText().toString()), 60) //100
                             .setDesiredAccuracy(RoamTrackingMode.DesiredAccuracy.HIGH)
                             .build();
-                    Roam.startTracking(roamTrackingMode);
+                    Roam.startTracking(roamTrackingMode,new TrackingCallback() {
+                        @Override
+                        public void onSuccess(String s) {
+                            Log.d("TAG", "Tracking started" );
+                        }
+
+                        @Override
+                        public void onError(RoamError roamError) {
+                            Log.d("TAG", "Tracking not started" );
+                        }
+                    });
                     trackingStatus();
                     dialog.cancel();
                 }
