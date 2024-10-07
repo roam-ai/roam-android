@@ -451,3 +451,14 @@ We're pleased to introduce Roam Android SDK version 0.1.31, focusing on ensuring
 
 
 This update is part of our ongoing effort to keep the Roam Android SDK aligned with the latest technological advancements. If you have any questions or need further assistance, our support team is ready to help.
+
+## 0.1.32
+
+We're excited to present Roam Android SDK version 0.1.32, with key improvements to our distance-based tracking system. In this update, we've addressed the following issues:
+
+**Location Gap Fix:** We've resolved an issue where location gaps occurred during distance-based tracking. This fix ensures smoother and more continuous location data collection, preventing unnecessary gaps in the location trail.
+
+**Reduced Location Drift:** Enhancements have been made to minimize location drift during tracking. This improvement provides more precise and reliable location data, ensuring accuracy even when tracking across varied distances.
+
+These improvements are designed to offer a more consistent and accurate tracking experience. We're dedicated to optimizing your location tracking capabilities. For any questions or feedback, our support team is ready to assist.
+
