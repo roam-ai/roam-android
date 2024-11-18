@@ -63,7 +63,7 @@ add the dependencies below in your `app build.gradle` file.
 
 ```
 dependencies {
-    implementation 'com.roam.sdk:roam-android:0.1.34-beta.1'
+    implementation 'com.roam.sdk:roam-android:0.1.34'
 }
 ```
 
@@ -71,7 +71,7 @@ Then sync Gradle.
 
 ### Manual Installation
 
-[Download](https://github.com/roam-ai/roam-android/releases/download/0.1.34-beta.1/Roam.zip) and unzip Roam SDK
+[Download](https://github.com/roam-ai/roam-android/releases/download/0.1.34/Roam.zip) and unzip Roam SDK
 
 1. Open Android Studio and add the SDK `Roam.aar` as a module using File > New > New Module > Import .JAR/.AAR Package.
 2. Once Gradle is finished click File > Project Structure again.
