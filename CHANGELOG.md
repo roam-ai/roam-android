@@ -478,3 +478,11 @@ We're thrilled to present Roam Android SDK version 0.1.34-beta.1, with updates t
 **Extended Visit Tracking Interval:** We've adjusted the visit tracking interval from 120 seconds to 300 seconds. This change allows for more accurate ground truth data and improves SDK efficiency, resulting in lower resource usage and more reliable tracking insights.
 
 These improvements align with our commitment to provide efficient and precise location tracking. For questions or feedback, our support team is always ready to assist.
+
+## 0.1.34
+
+We're thrilled to present Roam Android SDK version 0.1.34, featuring updates to enhance the accuracy of trip summaries. Here's what's new:
+
+**Accurate Distance Information in Trip Summary:** The trip summary now includes precise distance calculations, providing users with more reliable and accurate trip details. This improvement enhances the overall user experience by delivering trustworthy and consistent data.
+
+This update reflects our ongoing commitment to optimizing functionality and improving user satisfaction. If you have any questions or feedback, our support team is always here to help.
