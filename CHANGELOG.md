@@ -486,3 +486,23 @@ We're thrilled to present Roam Android SDK version 0.1.34, featuring updates to 
 **Accurate Distance Information in Trip Summary:** The trip summary now includes precise distance calculations, providing users with more reliable and accurate trip details. This improvement enhances the overall user experience by delivering trustworthy and consistent data.
 
 This update reflects our ongoing commitment to optimizing functionality and improving user satisfaction. If you have any questions or feedback, our support team is always here to help.
+
+
+## 0.1.35-beta.1
+
+We're thrilled to present Roam Android SDK version 0.1.35-beta.1, introducing new features to improve location accuracy and data collection. 
+
+Here's what's new:
+
+**Horizontal Accuracy Filter:**
+Added a horizontal accuracy filter to allow location data to be refined based on a specified accuracy threshold, ensuring higher precision in location tracking.
+
+**Data Enrichment:**
+Enhanced data collection capabilities to gather comprehensive device data from both Android and iOS platforms, enabling richer insights.
+
+**Centroid Method:**
+Introduced a centroid calculation method to derive a representative central coordinate from clusters of geographical positions, offering a more reliable reference point.
+
+
+These updates are designed to provide a more accurate and enriched tracking experience. If you have any questions, concerns, or feedback, our support team is always here to assist.
+
