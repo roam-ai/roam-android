@@ -506,3 +506,10 @@ Introduced a centroid calculation method to derive a representative central coor
 
 These updates are designed to provide a more accurate and enriched tracking experience. If you have any questions, concerns, or feedback, our support team is always here to assist.
 
+## 0.1.35-beta.2
+
+We're thrilled to present Roam Android SDK version 0.1.35-beta.2, featuring updates to enhance the data enrichment. Here's what's new:
+
+**Data Enrichment:** Enhanced data enrichment support for listener method to gather comprehensive device data from both Android and iOS platforms, enabling richer insights.
+
+These updates are designed to provide a more accurate and enriched tracking experience. If you have any questions, concerns, or feedback, our support team is always here to assist.
