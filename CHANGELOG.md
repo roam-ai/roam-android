@@ -513,3 +513,24 @@ We're thrilled to present Roam Android SDK version 0.1.35-beta.2, featuring upda
 **Data Enrichment:** Enhanced data enrichment support for listener method to gather comprehensive device data from both Android and iOS platforms, enabling richer insights.
 
 These updates are designed to provide a more accurate and enriched tracking experience. If you have any questions, concerns, or feedback, our support team is always here to assist.
+
+## 0.1.35-beta.4
+
+**Enhancements in Data Enrichment and Testing Capabilities**
+
+We're excited to introduce Roam Android SDK version 0.1.35-beta.4, bringing updates to enrich data insights and improve testing flexibility. Here's what's new:
+
+**New Data Enrichment:**
+
+Introduced additional data enrichment features to provide more detailed and valuable device information.
+
+
+**Increased Minimum SDK Version:**
+
+Updated the minimum SDK version requirement to ensure compatibility with modern Android devices and features.
+
+
+**New Testing Functions:**
+
+Added several new functions to facilitate testing, making it easier to validate and refine implementation.
+These updates are aimed at improving the SDK's capabilities and user experience. If you have any questions, concerns, or feedback, our support team is here to assist.
