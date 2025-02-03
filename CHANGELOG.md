@@ -534,3 +534,11 @@ Updated the minimum SDK version requirement to ensure compatibility with modern 
 
 Added several new functions to facilitate testing, making it easier to validate and refine implementation.
 These updates are aimed at improving the SDK's capabilities and user experience. If you have any questions, concerns, or feedback, our support team is here to assist.
+
+## 0.1.35-beta.5
+
+We're excited to introduce Roam android SDK version 0.1.35-beta.5, with updates aimed at improving data insights. Here's what's new:
+Bug Fixes:
+Fixed minor issues to ensure a more stable and seamless integration experience.
+
+
