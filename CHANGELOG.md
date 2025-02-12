@@ -541,4 +541,11 @@ We're excited to introduce Roam android SDK version 0.1.35-beta.5, with updates 
 Bug Fixes:
 Fixed minor issues to ensure a more stable and seamless integration experience.
 
+## 0.1.35-beta.6
+
+We're excited to introduce Roam android SDK version 0.1.35-beta.6, with updates aimed at improving batch data processing. Here's what's new:
+Bug Fixes:
+Fixed minor issues to ensure a more stable and seamless integration experience.
+
+
 
