@@ -547,5 +547,17 @@ We're excited to introduce Roam android SDK version 0.1.35-beta.6, with updates 
 Bug Fixes:
 Fixed minor issues to ensure a more stable and seamless integration experience.
 
+## 0.1.35
 
+Enhancements in Data Enrichment and SDK Compatibility
 
+We're excited to introduce Roam Android SDK version 0.1.35, bringing improvements to data enrichment and platform compatibility. Here's what's new:
+
+New Data Enrichment:
+
+Added additional data enrichment features to enhance the quality and depth of collected information.
+
+Updated Minimum SDK Version:
+
+Increased the minimum SDK version to 21 for better compatibility with modern Android features.
+These updates aim to provide a more efficient and reliable experience. If you have any questions or feedback, our support team is here to assist.
