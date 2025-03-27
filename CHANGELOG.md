@@ -561,3 +561,14 @@ Updated Minimum SDK Version:
 
 Increased the minimum SDK version to 21 for better compatibility with modern Android features.
 These updates aim to provide a more efficient and reliable experience. If you have any questions or feedback, our support team is here to assist.
+
+## 0.1.36
+
+**Enhancements in Data Customization**
+
+We're thrilled to present Roam Android SDK version 0.1.36, introducing new enhancements for greater customization. Here's what's new:
+
+**Data Enhancements Additions:**
+Introduced several new parameters to provide more flexibility and control over data handling.
+
+These updates aim to enhance the SDK's customization capabilities and overall user experience. If you have any questions or feedback, our support team is always here to assist you.
