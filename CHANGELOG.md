@@ -572,3 +572,19 @@ We're thrilled to present Roam Android SDK version 0.1.36, introducing new enhan
 Introduced several new parameters to provide more flexibility and control over data handling.
 
 These updates aim to enhance the SDK's customization capabilities and overall user experience. If you have any questions or feedback, our support team is always here to assist you.
+
+## 0.1.37
+
+We're excited to introduce Roam Android SDK version 0.1.37, bringing key improvements and updates. 
+
+Here's what's new:
+
+- Fixed callback issue for getting and creating users, ensuring smoother functionality.
+
+- Added consumer ProGuard rules to support code shrinking and optimization.
+
+- Updated Retrofit library to version 2.11.0 for improved network handling.
+
+- Upgraded AGP version to 8.2.0 and Gradle version to 8.3, enhancing build performance and compatibility.
+
+These updates aim to improve performance, security, and overall developer experience. If you have any questions or feedback, our support team is always here to assist you.
