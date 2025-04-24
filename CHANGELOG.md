@@ -588,3 +588,38 @@ Here's what's new:
 - Upgraded AGP version to 8.2.0 and Gradle version to 8.3, enhancing build performance and compatibility.
 
 These updates aim to improve performance, security, and overall developer experience. If you have any questions or feedback, our support team is always here to assist you.
+
+## 0.1.38
+
+Introducing Local Geofence Module
+
+We're thrilled to announce Roam Android SDK version 0.1.38, bringing powerful new geofencing capabilities right to your device — fully offline and network-independent. Here's what's new:
+
+✅ Fully Offline / Local Geofence Module: Enjoy geofencing capabilities without any network dependency.
+
+✏️ Geofence Management Methods: Easily create, update, retrieve, and delete geofences within your app.
+
+📍 Real-time Geofence Events: Instantly detect entry and exit events for precise location triggers.
+
+📊 High-capacity Geofence Handling: Efficiently manage 10,000+ geofences without impacting app performance.
+
+This update empowers developers to deliver more responsive and flexible location-aware experiences. For questions or feedback, our support team is always here to help!
+
+## 0.1.39
+
+Introducing Local Geofence Module
+
+We're thrilled to announce Roam Android SDK version 0.1.39, bringing powerful new geofencing capabilities right to your device — fully offline and network-independent. Here's what's new:
+
+✅ Fully Offline / Local Geofence Module: Enjoy geofencing capabilities without any network dependency.
+
+✏️ Geofence Management Methods: Easily create, update, retrieve, and delete geofences within your app.
+
+📍 Real-time Geofence Events: Instantly detect entry and exit events for precise location triggers.
+
+📊 High-capacity Geofence Handling: Efficiently manage 10,000+ geofences without impacting app performance.
+
+This update empowers developers to deliver more responsive and flexible location-aware experiences. For questions or feedback, our support team is always here to help!
+
+
+
