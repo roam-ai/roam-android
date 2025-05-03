@@ -622,4 +622,14 @@ We're thrilled to announce Roam Android SDK version 0.1.39, bringing powerful ne
 This update empowers developers to deliver more responsive and flexible location-aware experiences. For questions or feedback, our support team is always here to help!
 
 
+## 0.1.40
 
+Enhancements in Data Enrichment and Performance
+
+We're excited to introduce Roam Android SDK version 0.0.1.40, focusing on expanding data enrichment capabilities and boosting performance. In this update, we've made the following improvements:
+
+New Data Enrichment Fields: We've added additional fields to the data enrichment layer, allowing you to access more comprehensive and valuable location insights.
+
+Performance Improvements: Optimized internal processes for faster execution and improved efficiency, ensuring a smoother experience for both developers and end users.
+
+These updates are aimed at enhancing the depth and reliability of location data, while also improving the SDK's performance. As always, our support team is here to help with any questions or feedback you may have.
