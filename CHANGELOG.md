@@ -633,3 +633,9 @@ New Data Enrichment Fields: We've added additional fields to the data enrichment
 Performance Improvements: Optimized internal processes for faster execution and improved efficiency, ensuring a smoother experience for both developers and end users.
 
 These updates are aimed at enhancing the depth and reliability of location data, while also improving the SDK's performance. As always, our support team is here to help with any questions or feedback you may have.
+
+## 0.1.41-beta.2
+
+- Release as Beta Version
+- SDK Improvement
+- New Data Enrichment Fields Added.
