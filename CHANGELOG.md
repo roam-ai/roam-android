@@ -651,3 +651,16 @@ These updates are aimed at enhancing the depth and reliability of location data,
 - Release as Beta Version
 - SDK Improvement
 - New Data Enrichment Fields Added.
+
+## 0.1.41
+
+Enhancements in Data Enrichment, Performance, and Tracking Quality
+
+We're excited to introduce Roam Android SDK version 0.1.41, bringing key improvements that elevate the SDK's capabilities in data richness, performance, and tracking precision. Here's what's new:
+
+- New Data Enrichment Fields: We've added additional fields to provide deeper and more insightful location data.
+- SDK Optimisation: Core components have been optimised to reduce overhead and enhance efficiency during runtime.
+- Improved Tracking Quality: Refined algorithms now deliver more accurate and consistent location tracking, even in complex environments.
+
+These updates are designed to deliver a smoother and more insightful experience for developers and users alike. If you have any questions, feedback, or need assistance, our support team is always here to help.
+
