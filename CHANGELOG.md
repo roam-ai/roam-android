@@ -639,3 +639,15 @@ These updates are aimed at enhancing the depth and reliability of location data,
 - Release as Beta Version
 - SDK Improvement
 - New Data Enrichment Fields Added.
+
+## 0.1.41-beta.3
+
+- Release as Beta Version
+- SDK Improvement
+- New Data Enrichment Fields Added.
+
+## 0.1.41-beta.4
+
+- Release as Beta Version
+- SDK Improvement
+- New Data Enrichment Fields Added.
