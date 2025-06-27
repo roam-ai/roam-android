@@ -664,3 +664,16 @@ We're excited to introduce Roam Android SDK version 0.1.41, bringing key improve
 
 These updates are designed to deliver a smoother and more insightful experience for developers and users alike. If you have any questions, feedback, or need assistance, our support team is always here to help.
 
+## 0.1.42
+
+Enhancements in Data Enrichment, Debugging, and Permission Handling
+
+We're excited to introduce Roam Android SDK version 0.1.42, bringing new capabilities to improve data insights, diagnostics, and flexibility in permission management. Here's what's new:
+
+**New Data Enrichment Fields:** Added additional enrichment parameters to provide deeper and more valuable location context.
+
+**Enhanced Debug and Diagnostic Logs:** Introduced detailed logs to aid in better debugging and issue tracking during development.
+
+**Optional Permissions:** Certain permissions are now optional, giving developers more control based on app-specific use cases.
+
+These improvements are designed to offer greater flexibility, visibility, and precision within your location-based applications. For questions or support, our team is always here to help.
