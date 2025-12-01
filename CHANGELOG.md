@@ -694,3 +694,16 @@ The SDK has been optimized for better memory and resource management, leading to
 These improvements are aimed at providing developers with a more robust, efficient, and seamless integration experience. We're committed to continuously enhancing the Roam SDK to deliver top-quality performance and reliability.
 
 If you have any questions, concerns, or feedback, our support team is always here to assist you
+
+## 0.2.1
+
+We are pleased to announce the release of Roam Location** SDK v0.2.1.**
+This update focuses on improving stability, compatibility, and data reliability across various Android versions.
+
+**🔧 Fixes**
+Resolved background service launch issue affecting certain devices, which previously caused unexpected failures during background operations.
+
+**✨ Enhancements**
+The SDK can now continue sending non-location updates even when location permissions are not granted, ensuring consistent delivery of essential information.
+
+If you have any questions, concerns, or feedback, our support team is always here to assist you
