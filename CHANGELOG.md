@@ -707,3 +707,52 @@ Resolved background service launch issue affecting certain devices, which previo
 The SDK can now continue sending non-location updates even when location permissions are not granted, ensuring consistent delivery of essential information.
 
 If you have any questions, concerns, or feedback, our support team is always here to assist you
+
+## 0.2.2
+
+A stability-focused update delivering major improvements to **ANR prevention**, **battery efficiency**, and **service lifecycle reliability**.
+
+---
+
+## ✅ What’s New
+
+### **1. ANR Issues Resolved**
+All known ANR triggers have been fully eliminated.
+
+**Impact:**  
+- No UI freezes  
+- Smoother performance  
+- Faster response during tracking  
+
+---
+
+### **2. Improved Battery Efficiency**
+Tracking modes updated to avoid unnecessary GPS usage.
+
+**Impact:**  
+- **40–60% better battery life**  
+- No unexpected background restarts  
+
+---
+
+### **3. Faster Location Processing**
+Heavy location-processing tasks now execute on background threads.
+
+**Impact:**  
+- Faster location updates  
+- Zero UI lag during tracking  
+
+---
+
+### **4. Service Lifecycle Fix**
+Resolved an issue where the SDK could start its background service at inappropriate times (e.g., on initial activity start or background transitions).
+
+**Impact:**  
+- No unexpected service starts  
+- More predictable lifecycle behavior  
+- Reduced background activity & battery drain  
+
+---
+
+### **5. Enhanced SDK Reliability**
+Internal CPU and memory optimizations for smoother operation across devices.
