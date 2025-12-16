@@ -756,3 +756,15 @@ Resolved an issue where the SDK could start its background service at inappropri
 
 ### **5. Enhanced SDK Reliability**
 Internal CPU and memory optimizations for smoother operation across devices.
+
+
+## 0.2.3
+
+We are pleased to announce the release of Roam Location SDK **v0.2.3.** This update focuses on improving stability, data reliability, and privacy compliance.
+
+- Added Consent Management (CMP) support to ensure compliant location data collection.
+- Optimized background sync to reduce data loss during network interruptions.
+- Improved stability for large location datasets.
+- Fixed edge cases causing pending records to remain unsynced.
+
+If you have any questions, concerns, or feedback, our support team is always here to assist you.
