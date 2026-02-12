@@ -65,11 +65,11 @@ class MyApp : Application() {
         super.onCreate()
 
         // Batch sync only
-        Roam.initialize(this, "YOUR_SECRET_KEY")
+        Roam.initialize(this, "YOUR_SECRET_KEY", foregroundNotificationVisibility)
 
         // or - Batch sync + live updates via receiver
         val receiver = LocationReceiver()
-        Roam.initialize(this, "YOUR_SECRET_KEY", receiver)
+        Roam.initialize(this, "YOUR_SECRET_KEY", receiver, foregroundNotificationVisibility)
 
         // Enable batch sync
         Roam.setConfig(true, RoamBatchPublish.Builder().enableAll().build())
@@ -91,7 +91,7 @@ public class MyApp extends Application {
 
         // or - Batch sync + live updates via receiver
         LocationReceiver receiver = new LocationReceiver();
-        Roam.initialize(this, "YOUR_SECRET_KEY", receiver, foregroundNotificationVisibility);  // true in case of visible, false in case of hide
+        Roam.initialize(this, "YOUR_SECRET_KEY", receiver, foregroundNotificationVisibility);
 
         Roam.setConfig(true, new RoamBatchPublish.Builder().enableAll().build());
     }
