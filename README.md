@@ -46,7 +46,7 @@ Add to **app/build.gradle**:
 
 ```
 dependencies {
-    implementation "io.github.roam-sdk:roam-android:0.2.3"
+    implementation "io.github.roam-sdk:roam-android:0.2.4"
 }
 
 ```
