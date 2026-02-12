@@ -87,11 +87,11 @@ public class MyApp extends Application {
         super.onCreate();
 
         // Batch sync only
-        Roam.initialize(this, "YOUR_SECRET_KEY");
+        Roam.initialize(this, "YOUR_SECRET_KEY", foregroundNotificationVisibility);
 
         // or - Batch sync + live updates via receiver
         LocationReceiver receiver = new LocationReceiver();
-        Roam.initialize(this, "YOUR_SECRET_KEY", receiver);
+        Roam.initialize(this, "YOUR_SECRET_KEY", receiver, foregroundNotificationVisibility);  // true in case of visible, false in case of hide
 
         Roam.setConfig(true, new RoamBatchPublish.Builder().enableAll().build());
     }
