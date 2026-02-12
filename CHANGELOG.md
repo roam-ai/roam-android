@@ -768,3 +768,14 @@ We are pleased to announce the release of Roam Location SDK **v0.2.3.** This upd
 - Fixed edge cases causing pending records to remain unsynced.
 
 If you have any questions, concerns, or feedback, our support team is always here to assist you.
+
+## 0.2.4
+
+We are pleased to announce the release of Roam Location SDK v0.2.4. This update introduces enhanced control over foreground notification behavior while maintaining full backward compatibility.
+
+- Added flag-based control for foreground notification visibility during tracking.
+- Introduced new overloaded initialize() methods with a foregroundNotificationVisibility parameter.
+- Maintained traditional behavior as the default to ensure zero breaking changes.
+- Improved battery efficiency through screen state–based tracking optimization.
+
+If you have any questions, concerns, or feedback, our support team is always here to assist you. 🚀
